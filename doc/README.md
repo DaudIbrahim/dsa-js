@@ -8,11 +8,11 @@ An answer from [stackoverflow](https://stackoverflow.com/a/11143870/7031530)
 
 ### Sequence
 
-    You Start with a Sequence.
+You Start with a Sequence.
 
-    You identify a pattern that seems to hold true for every term in the Sequence.
+You identify a pattern that seems to hold true for every term in the Sequence.
 
-    Make use of Mathematical Induction to prove that the pattern holds true for every term down the Sequence.
+Make use of Mathematical Induction to prove that the pattern holds true for every term down the Sequence.
 
 ### Method of Proof by Mathematical Induction
 
@@ -52,7 +52,7 @@ An answer from [stackoverflow](https://stackoverflow.com/a/11143870/7031530)
     - Explicit Formula: Solution to the Recurrence Ralation.
     - Correctedness of the formula proven by Mathematical Induction.
 
-## Recursive Leap of Faith
+### Recursive Leap of Faith
 
 The most difficult part of solving problems recursively is to figure out how knowing the solution to the smaller problems of the same type as the orignal problem will give you a solution to the problem as a whole.
 
@@ -60,44 +60,45 @@ You suppose you knwo the solutions to the smaller subproblems, the supposition t
 
 The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by mathematical induction.
 
-## An answer to: What is the relationship between Mathematical Induction & Recursion?
+### Relationship between Mathematical Induction & Recursion?
 
 - Sequence
 
   - Think in terms of the following:
-    > Sequence, Pattern & Terms.
-    >
-    >> Both Mathematical Induction & Recursion deal with these.
+
+         Sequence, Pattern & Terms.
+
+         Both Mathematical Induction & Recursion deal with these.
 
 - Direction
 
   - Mathematical Induction
 
-    > `a, (a+1), (a+2), (a+3), ... k, (k+1)`
-    >
-    >> Start from base term `a` and prove that for `k >= a`, every subsequent `k + 1` is true
-    >
+         `a, (a+1), (a+2), (a+3), ... k, (k+1)`
+
+         Start from base term `a` and prove that for `k >= a`, every subsequent `k + 1` is true
 
   - Recursion
 
-    > `k, (k-1), (k-2), (k-3), ... k, a`
-    >
-    >> Define the `kth term`. `k` refers to earlier terms in the sequence `(k-1)`, `(k-2)` preceding and so forth - arriving at the initlal term `a`
-    >
+         `k, (k-1), (k-2), (k-3), ... k, a`
 
-  - Extra: Approx - ∞
-    - Mathematical Induction: Base to ∞
-    - Recursion ∞ to Initial Terms
+         Define the `kth term`. `k` refers to earlier terms in the sequence `(k-1)`, `(k-2)` preceding and so forth - arriving at the initlal term `a`
+
+    - Extra: Approx - ∞
+      - Mathematical Induction: Base to ∞
+      - Recursion ∞ to Initial Terms
 
 - Supposition
 
-> Both Inductive Hypothesis & Recursive Leap of Faith deal with a Supposition; a Hypothesis.
->
->> Mathematical Induction: Inductive Hypothesis is the supposition that P(k) is true; where k is any particular, but arbitrarily chosen integer with k >= a.
->>
->> Recursion: Recursive Leap of Faith is the supposition that the smaller subproblems have already been solved.
->>
+  - Both Inductive Hypothesis & Recursive Leap of Faith deal with a Supposition; a Hypothesis.
+
+        Mathematical Induction: Inductive Hypothesis is the supposition that P(k) is true; where k is any particular, but arbitrarily chosen integer with k >= a.
+        Recursion: Recursive Leap of Faith is the supposition that the smaller subproblems have already been solved.
 
 - Correctedness of the Explicit Formula proven by Mathematical Induction
 
     You use mathematical induction to check the correctness of your formula
+
+#### Reference
+
+[https://www.amazon.com/dp/1337694193/](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")

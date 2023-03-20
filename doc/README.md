@@ -82,7 +82,8 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
          `k, (k-1), (k-2), (k-3), ... k, a`
 
-         Define the `kth term`. `k` refers to earlier terms in the sequence `(k-1)`, `(k-2)` preceding and so forth - arriving at the initlal term `a`
+         Define the `kth term`.
+         `k` refers to earlier terms in the sequence `(k-1)`, `(k-2)` preceding and so forth arriving at the initlal term `a`
 
     - Extra: Approx - ∞
       - Mathematical Induction: Base to ∞
@@ -101,4 +102,6 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
 #### Reference
 
-[https://www.amazon.com/dp/1337694193/](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")
+- [Discrete Mathematics with Applications](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")
+
+- [My Answer on stackoverflow](https://stackoverflow.com/a/75788144/7031530)

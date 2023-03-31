@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Draft Text
-.draft.txt
+# Text Ignore
+.textignore.txt

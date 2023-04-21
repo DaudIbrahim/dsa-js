@@ -3,7 +3,7 @@
 # - HCF, GCF, GCD
 # Find HCF by: Prime Factorization for (30, 42)
 
-# Find HCF by: Euclid's Algorithm for (30, 42)
+# Find HCF by: Euclid's Division Algorithm for (30, 42)
 # Euclid's Algorithm: 42, 30, 12, 6, 2
 
 def highest_common_factor(x, y):
@@ -25,10 +25,16 @@ def highest_common_factor(x, y):
         return highest_common_factor(small_number, remainder)
 
 
-print(highest_common_factor(42, 30))
-print(highest_common_factor(72, 164))
-print(highest_common_factor(2, 5))
-print(highest_common_factor(3, 5))
+def least_common_multiple(x, y):
+    # Khan Academy LCM lesson - https://youtu.be/znmPfDfsir8
+    # LCM (x, y) =  (x * y) / HCF (x, y)
+    # Use paper and a pencil to recollect how you arrived at this mathematical formula.
 
-# [ ] - Continue 🚩
-# Have learnt Euclid's Algorithm for HCF now learn mathematically what is LCF and how to compute it
+    hcf = highest_common_factor(x, y)
+    [quotient, _] = divmod((x * y), hcf)
+    return quotient
+
+
+print('18, 12')
+print(f'Higest Common Factor, {highest_common_factor(18, 12)}')
+print(f'Least Common Multiple, {least_common_multiple(18, 12)}')

@@ -128,5 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Text Ignore
-.textignore.txt
+# Folder Ignore
+.folderignore
+.ignore

@@ -122,15 +122,13 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
     You use mathematical induction to check the correctness of your formula
 
+#### Recursion Explore
+
+- Tail Recursion
+- Why Recursion is not always the best choice - YT
+
 ##### Reference
 
 - [Discrete Mathematics with Applications](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")
 
 - [My Answer on stackoverflow](https://stackoverflow.com/a/75788144/7031530)
-
-## Eplore
-
-### Recursion Explore
-
-- Tail Recursion
-- Why Recursion is not always the best choice - YT

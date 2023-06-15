@@ -18,6 +18,24 @@ It is more important to be able to [recognize a problem](https://qr.ae/priZWZ "J
 - Identify Patterns
 - Create Solutions
 
+## Strcuture & Elements & Operations
+
+Mix and Match
+
+- Operations Manipulating the Strcuture (2D Array Example)
+
+  - Create | Create the 2D Data Structure
+  - Traversal | Traverse the 2D Data Structure
+  - [Merge](https://www.adservio.fr/post/data-structure-types-operations)
+  - Copy
+
+- Operations Manipulating the Data (Elements) - [Common Data Structure Operations](https://www.bigocheatsheet.com/ 'bigocheatsheet') - (Hook DB-ACID | ASID)
+
+  - Access
+  - Search
+  - Insertion
+  - Deletion
+
 ### Nature of the Scientific Process
 
 Problem sets are great ways to provide students with the practice necessary to gain mastery of new skills that you have introduced in class. Problem sets are also great at reflecting the nature of the [scientific process](https://bokcenter.harvard.edu/problem-sets "Harvard University"), which so often involves problem solving, and in so doing help reinforce the explanatory power of your discipline.
@@ -132,3 +150,23 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 - [Discrete Mathematics with Applications](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")
 
 - [My Answer on stackoverflow](https://stackoverflow.com/a/75788144/7031530)
+
+## Big O Notation
+
+ **Big O Notation** - [Big O tells you how it an algorithm scales with respect to its input size](https://www.youtube.com/watch?v=7VHG6Y2QmtM&lc=UgwAxy3T3INAexROKJR4AaABAg)
+
+## Array
+
+Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
+
+- [1D Array using Python Module: Array](https://docs.python.org/3/library/array.html#module-array)
+
+- [2D Arrays using Numpy](https://numpy.org/doc/stable/user/basics.creation.html)
+
+- [Python Array vs List](https://learnpython.com/blog/python-array-vs-list/)
+
+- [Python List VS Array VS Tuple](https://www.geeksforgeeks.org/python-list-vs-array-vs-tuple/)
+
+## End
+
+End

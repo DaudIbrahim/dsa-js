@@ -4,7 +4,7 @@
 # Find HCF by: Prime Factorization for (30, 42)
 
 # Find HCF by: Euclid's Division Algorithm for (30, 42)
-# Euclid's Algorithm: 42, 30, 12, 6, 2
+# Euclid's Algorithm: 42, 30, 12, 6, 0
 
 def highest_common_factor(x, y):
 

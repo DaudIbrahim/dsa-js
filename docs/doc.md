@@ -159,6 +159,16 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
 
+### Linear Data Structures
+
+[Structures can be broken down into two main categories, linear and nonlinear.](https://www.adservio.fr/post/data-structure-types-operations)
+
+Main Linear Data Structures:
+
+- Arrays
+
+### Ueful Array Reference
+
 - [1D Array using Python Module: Array](https://docs.python.org/3/library/array.html#module-array)
 
 - [2D Arrays using Numpy](https://numpy.org/doc/stable/user/basics.creation.html)
@@ -166,6 +176,16 @@ Arrays are not a built-in data structure, and therefore need to be imported via 
 - [Python Array vs List](https://learnpython.com/blog/python-array-vs-list/)
 
 - [Python List VS Array VS Tuple](https://www.geeksforgeeks.org/python-list-vs-array-vs-tuple/)
+
+## Python Lists
+
+In Python, lists are implemented as dynamic arrays. The memory allocation for a dynamic array is different from that of a static array. When a dynamic array is created, it allocates a fixed amount of memory initially. As elements are added to the list, the dynamic array checks if it has enough capacity to store the new elements. If not, it reallocates a larger block of memory and copies the elements from the old block to the new one.
+
+The size of the new block is typically a multiple of the old block's size (usually around 1.125 times, but this can vary depending on the implementation). This allows for amortized constant-time complexity for append operations.
+
+When altering a dynamic array in Python, such as adding or removing elements, it does not always create a new array. If the current array has enough capacity to accommodate the changes, the operations are performed in-place without creating a new array.
+
+However, if the dynamic array needs to be resized due to the change (either because it needs more capacity to store additional elements or because it can free up some memory by using a smaller block), a new array will be created, and the contents of the old array will be copied to the new one.
 
 ## End
 

@@ -2,6 +2,15 @@
 # Python does not have traditional C-style for loops.
 # We do have something that we call a for loop in Python, but it works like a foreach loop.
 
+# Enumerate - to enumerate is to list or count off one by one.
+# Iteration - set of instructions that are to be repeated
+
+# iterable - An iterable is anything you can loop over with a for loop in Python
+
+# iterator;
+
+# In Python, both enumerate() and range() are efficient ways to traverse a list, but they serve slightly different purposes. The choice between the two depends on your specific use case and the context in which you are working. enumerate() is particularly useful when you need to iterate over a list while also keeping track of the index of the current item. It returns an iterator that yields pairs of the form (index, element) for each element in the list. Since enumerate() provides both the index and the element, it can lead to cleaner and more readable code in some situations. On the other hand, range() is more general-purpose and is used to generate a sequence of numbers. When you use range() with a list, you typically use it to loop through the indices of the list and access elements using those indices. In terms of efficiency, both enumerate() and range() have similar time complexities when traversing a list. They are both implemented as iterators and do not create a new list in memory.
+
 # An iterable is anything you can loop over with a for loop in Python
 # Python's for loops use iterators.
 for n in range(100, 102):

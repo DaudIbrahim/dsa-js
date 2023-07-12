@@ -1,3 +1,3 @@
 # Data Structures and Algorithms
 
-[Notes/Doc](doc/README.md)
+[Notes/Doc](./docs/doc.md)

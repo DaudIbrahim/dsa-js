@@ -2,6 +2,10 @@
 
 Data Structures and Algorithms in Python
 
+Grow a core competency in *Translating Abstraction into Concreteness*
+
+Visualizing: Creating your problems first on a whiteboard, and then being able to translate abstraction into concreteness.
+
 ## PSET
 
 Problem Set
@@ -155,6 +159,27 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
  **Big O Notation** - [Big O tells you how it an algorithm scales with respect to its input size](https://www.youtube.com/watch?v=7VHG6Y2QmtM&lc=UgwAxy3T3INAexROKJR4AaABAg)
 
+[Big O Cheat Sheet](https://www.bigocheatsheet.com/)
+
+- [Important concepts](https://theprimeagen.github.io/fem-algos/lessons/algorithms-and-time-space-complexity/time-and-space-complexity)
+  - Growth is with respect to the input
+  - Constants are dropped
+  - Worst case is usually the way we measure
+
+- Cases
+  - Best Case - Big Omega
+  - Average Case - Big Theta
+  - Worst Case - Big O
+
+TODO - Read - [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
+
+Math
+
+- Sets
+- Functions
+- [Logarithms](https://youtu.be/ntBWrcbAhaY?t=180)
+- Big O Notation
+
 ## Array
 
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
@@ -176,6 +201,8 @@ Main Linear Data Structures:
 - [Python Array vs List](https://learnpython.com/blog/python-array-vs-list/)
 
 - [Python List VS Array VS Tuple](https://www.geeksforgeeks.org/python-list-vs-array-vs-tuple/)
+
+Low level Array access = (a + width * offset)
 
 ## Python Lists
 

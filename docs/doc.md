@@ -180,6 +180,29 @@ Math
 - [Logarithms](https://youtu.be/ntBWrcbAhaY?t=180)
 - Big O Notation
 
+## Binary Search
+
+Midpoint - find the midpoint
+
+Index: *Offset by One*
+
+A note on Set Theory
+
+- Closed Interval
+
+  - [a, b] - a & b both are included in the interval
+
+- Half-open Interval
+
+  - [a, b) - a is included & b is not, b is excluded from the interval
+
+    Half Interval Python Example
+
+    ```py
+    for i in range(0, 5):
+      print(i) # 0, 1, 2, 3, 4, 5
+    ```
+
 ## Array
 
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.

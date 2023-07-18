@@ -37,3 +37,9 @@ export default function two_crystal_balls(breaks: boolean[]): number {
   
     return returnIdx;
   }
+  
+  const anArray = Number[1];
+  const result = two_crystal_balls([anArray]);
+  console.log('Result', result);
+  
+  

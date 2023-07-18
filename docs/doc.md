@@ -6,6 +6,8 @@ Grow a core competency in *Translating Abstraction into Concreteness*
 
 Visualizing: Creating your problems first on a whiteboard, and then being able to translate abstraction into concreteness.
 
+- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 ## PSET
 
 Problem Set
@@ -184,7 +186,9 @@ Math
 
 Midpoint - find the midpoint
 
-Index: *Offset by One*
+Index: *Offset by One* | *Retain*
+
+- *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
 
 A note on Set Theory
 
@@ -237,6 +241,37 @@ When altering a dynamic array in Python, such as adding or removing elements, it
 
 However, if the dynamic array needs to be resized due to the change (either because it needs more capacity to store additional elements or because it can free up some memory by using a smaller block), a new array will be created, and the contents of the old array will be copied to the new one.
 
-## End
+## Linked List
 
-End
+**Every single LinkedList is essentially a graph. Every single LinkedList is technically a tree.**
+
+### Singly Linked List
+
+In a singly linked list, each node contains a data element and a reference (or link) to the next node in the sequence. Traversal can only be done in one direction, starting from the head and following the next pointers until reaching the tail. It is the simplest and most common type of linked list.
+
+### Doubly Linked List
+
+In a doubly linked list, each node has references to both the next node and the previous node in the sequence. This allows for traversal in both forward and backward directions. The additional previous pointers provide more flexibility but require extra memory to store.
+
+### Circular Linked List
+
+In a circular linked list, the tail node's next reference points back to the head, forming a loop. This means there is no end or null reference, and the list can be traversed indefinitely. Circular linked lists are useful in scenarios where cyclic behavior or continuous looping is required.
+
+### Doubly Circular Linked List
+
+This type of linked list combines the features of a doubly linked list and a circular linked list. Each node has references to both the next and previous nodes, and the tail node's next reference points back to the head. This creates a circular loop that can be traversed in both directions.
+
+### Linked List More
+
+      Succeeding Node & Preceding node
+
+### Keyword
+
+- Retain
+
+- Pen-Paper
+
+### Misc
+
+- middle-element
+- nested loop

@@ -23,7 +23,7 @@ export default class Queue<T> {
          */
         this.length++
         const theNewNode = { value: item, next: undefined }
-        if (this.tail) this.tail.next = theNewNode
+        if(this.tail) this.tail.next = theNewNode
         if (this.head === undefined) this.head = theNewNode
         this.tail = theNewNode
     }
@@ -44,4 +44,33 @@ export default class Queue<T> {
     peek(): T | undefined {
         return this.head?.value;
     }
+
+    printFromStartToFinish(): void {
+        if (this.length > 0) {
+
+            let currentNode = this.head
+
+            do {
+                console.log(currentNode?.value)
+                currentNode = currentNode?.next
+            } while (currentNode !== undefined)
+        }
+    }
 }
+
+const list = new Queue<number>();
+
+list.enqueue(5);
+list.enqueue(7);
+list.enqueue(9);
+list.enqueue(10);
+list.enqueue(50);
+
+list.deque();
+list.deque();
+list.deque();
+list.deque();
+list.deque();
+
+list.printFromStartToFinish()
+

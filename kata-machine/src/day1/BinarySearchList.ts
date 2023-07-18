@@ -1,8 +1,6 @@
 /**
- * Please use a pen and paper to understand the abstract
- * Not possible to write down every case in here
+ * Please use Pen-Paper to translate abstraction into concrete
  */
-
 export default function bs_list(haystack: number[], needle: number): boolean {
     /**
      * O (Log N)
@@ -26,13 +24,16 @@ export default function bs_list(haystack: number[], needle: number): boolean {
          * mid = 2 + (3-2) / 2
          * mid = 2 + 1/2
          * mid = 5 / 2
+         * 
+         * Retain ThePrimeagen method of finding the mid point &
+         * Retain inclusive/exclusive [low, hight) range(0, 5)
+         * 
+         * Bothe mids are equal in their result.equation. In ThePrimeagen method low + Math.floor((high - low) / 2) `low as offset`
+         * Learn ThePrimeagen's mid method, this way you will remember about the offset
+         * Good memory hook for Offset by one, where highest is exclusive and midpoint uses low as an offset as well
+         * Additionally note AWS for pagination includes offet, MySQL in its query for pagination makes use of  OFFSET
          *
          */
-
-        // [ ] - Please learn how to find middle element | Learn one and learn it well
-        // Bothe mids are equal in ThePrimeagen method low + (works as a offset)
-        // Good memory hook for Offset by one, where highest is exclusive and midpoint uses low as an offset as well
-
 
         const mid = low + Math.floor((high - low) / 2)
         const val = haystack[mid]

@@ -3,11 +3,19 @@ type Node<T> = {
     next?: Node<T>,
 }
 
+/**
+ * Retain: Queue Mental Model (Linked List)
+ * Think of a real life Queue
+ * The first person to be served is at the front of Queue that is the -> HEAD
+ * The last person is to be served last at the end of Queue that is the -> TAIL
+ * 
+ * FIFO - First In - First Out
+ * 
+ * Alternatively visualize Queues diargarm in System Design (FIFO)
+ * enqueue()->TAIL . . . . . . . . . . . deque()->HEAD->
+ */
+
 export default class Queue<T> {
-    /**
-     * Queue
-     * First in first out (FIFO)
-     */
     public length: number;
     private head?: Node<T>;
     private tail?: Node<T>;
@@ -18,9 +26,6 @@ export default class Queue<T> {
     }
 
     enqueue(item: T): void {
-        /**
-         * Add
-         */
         this.length++
         const theNewNode = { value: item, next: undefined }
         if (this.tail) this.tail.next = theNewNode
@@ -29,9 +34,6 @@ export default class Queue<T> {
     }
 
     deque(): T | undefined {
-        /**
-         * Remove
-         */
         if (this.length === 0) return undefined
 
         this.length--
@@ -43,5 +45,17 @@ export default class Queue<T> {
 
     peek(): T | undefined {
         return this.head?.value;
+    }
+
+    printFromStartToFinish(): void {
+        if (this.length > 0) {
+
+            let currentNode = this.head
+
+            do {
+                console.log(currentNode?.value)
+                currentNode = currentNode?.next
+            } while (currentNode !== undefined)
+        }
     }
 }

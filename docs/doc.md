@@ -245,6 +245,10 @@ However, if the dynamic array needs to be resized due to the change (either beca
 
 **Every single LinkedList is essentially a graph. Every single LinkedList is technically a tree.**
 
+- Understand conceptually and implement with caution (easy to make mistake in implementation)
+
+- Very Important as `Graphs and Trees` underneath use the very similar pointer mechanism of that of `Linked List`
+
 ### Singly Linked List
 
 In a singly linked list, each node contains a data element and a reference (or link) to the next node in the sequence. Traversal can only be done in one direction, starting from the head and following the next pointers until reaching the tail. It is the simplest and most common type of linked list.
@@ -254,6 +258,8 @@ In a singly linked list, each node contains a data element and a reference (or l
 In a doubly linked list, each node has references to both the next node and the previous node in the sequence. This allows for traversal in both forward and backward directions. The additional previous pointers provide more flexibility but require extra memory to store.
 
 ### Circular Linked List
+
+A circular singly linked list is a linked list where the last node points back to the first node, forming a closed loop.
 
 In a circular linked list, the tail node's next reference points back to the head, forming a loop. This means there is no end or null reference, and the list can be traversed indefinitely. Circular linked lists are useful in scenarios where cyclic behavior or continuous looping is required.
 

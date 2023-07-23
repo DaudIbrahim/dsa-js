@@ -4,6 +4,8 @@ Data Structures and Algorithms in Python
 
 Grow a core competency in *Translating Abstraction into Concreteness*
 
+Adopt the mindset of *Think First; Code Second*
+
 Visualizing: Creating your problems first on a whiteboard, and then being able to translate abstraction into concreteness.
 
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
@@ -47,6 +49,8 @@ Mix and Match
 Problem sets are great ways to provide students with the practice necessary to gain mastery of new skills that you have introduced in class. Problem sets are also great at reflecting the nature of the [scientific process](https://bokcenter.harvard.edu/problem-sets "Harvard University"), which so often involves problem solving, and in so doing help reinforce the explanatory power of your discipline.
 
 ## Recursion
+
+[Recursive Leap of Faith](https://www.youtube.com/watch?v=rf6uf3jNjbo&t=620s)
 
 ### Relationship between Induction & Recursion?
 
@@ -209,6 +213,28 @@ A note on Set Theory
 
 ## Array
 
+Random Access with an ArrayList. Example - Give me index three.
+
+One key difference that with purely Arrays you essentually define a size aka a container
+
+- In array operations `insert` and `write` mean two different things
+
+  - Example An array of size 3 capacity
+
+    - At index 2 `write` value dummy-value. This is a write opration, writing at index 2
+
+    - At index 3 `write` value duumy-data-2
+
+      - Now observe that within an array with of capacity of three items you are writing data that exceeds the capacoty to 4 items
+
+        - & behold the Array has to grow in size which is the `insert` operation
+
+        - Ability to Grow
+
+          - Create a new array with increased capacity
+          - Copy existing items
+          - Write the new item at index 4
+
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
 
 ### Linear Data Structures
@@ -278,6 +304,12 @@ This type of linked list combines the features of a doubly linked list and a cir
 - Pen-Paper
 
 ### Misc
+
+- Start by fiding a solution for the smallest problem
+
+  - Start by solving for the base case
+
+  -
 
 - middle-element
 - nested loop

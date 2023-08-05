@@ -10,6 +10,8 @@ Visualizing: Creating your problems first on a whiteboard, and then being able t
 
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
+- [VisuAlgo](https://visualgo.net/en)
+
 ## PSET
 
 Problem Set

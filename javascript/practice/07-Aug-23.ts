@@ -70,19 +70,6 @@
 }
 
 {
-    /**
-     * Retain: Queue Mental Model (Linked List)
-     * Think of a real life Queue | Think of Queue in System Design
-     * The first person to be served is at the front of Queue that is the -> HEAD
-     * The last person is to be served last at the end of Queue that is the -> TAIL
-     * 
-     * FIFO - First In - First Out
-     * 
-     * Alternatively visualize Queues diargarm in System Design (FIFO)
-     * enqueue()->TAIL . . . . . . . . . . . deque()->HEAD->
-     * 
-     * Lesson here is to remember what the next actually points to
-     */
     type Node<T> = {
         value: T,
         next?: Node<T>,
@@ -151,5 +138,56 @@
     list.enqueue(5)
     list.enqueue(7)
     list.enqueue(9)
-    list.printFromStartToFinish()
+}
+
+{
+    type Node<T> = {
+        value: T,
+        next?: Node<T>,
+    }
+
+    class Stack<T> {
+        public length: number;
+        private head?: Node<T>;
+        private tail?: Node<T>;
+
+        constructor() {
+            this.length = 0
+            this.head = this.tail = undefined
+        }
+
+        push(item: T): void {
+            this.length++
+            const node = { value: item, next: this.head }
+            this.head = node
+            if (this.tail === undefined) this.tail = node
+        }
+
+        pop(): T | undefined {
+            if (this.head === undefined) return undefined
+            this.length--
+            const node = this.head
+            this.head === this.tail ? this.head = this.tail = undefined : this.head = node.next
+            return node.value
+        }
+
+        peek(): T | undefined {
+            return this.head ? this.head.value : undefined
+        }
+
+        printFromTopToBottom(): void {
+            let node = this.head ?? undefined
+            while (node) {
+                console.log(node.value)
+                node = node.next ? node.next : undefined
+            }
+        }
+    }
+
+    const list = new Stack<number>();
+
+    list.push(10)
+    list.push(20)
+    list.push(30)
+    list.printFromTopToBottom()
 }

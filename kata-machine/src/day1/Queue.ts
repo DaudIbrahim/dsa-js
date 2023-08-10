@@ -4,7 +4,7 @@ type Node<T> = {
 }
 
 /**
- * Retain: Queue Mental Model (Linked List)
+ * Memorize: Queue Mental Model (Linked List)
  * Think of a real life Queue
  * The first person to be served is at the front of Queue that is the -> HEAD
  * The last person is to be served last at the end of Queue that is the -> TAIL

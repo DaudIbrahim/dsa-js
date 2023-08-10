@@ -25,8 +25,8 @@ export default function bs_list(haystack: number[], needle: number): boolean {
          * mid = 2 + 1/2
          * mid = 5 / 2
          * 
-         * Retain ThePrimeagen method of finding the mid point &
-         * Retain inclusive/exclusive [low, hight) range(0, 5)
+         * Memorize ThePrimeagen method of finding the mid point &
+         * Memorize inclusive/exclusive [low, hight) range(0, 5)
          * 
          * Bothe mids are equal in their result.equation. In ThePrimeagen method low + Math.floor((high - low) / 2) `low as offset`
          * Learn ThePrimeagen's mid method, this way you will remember about the offset

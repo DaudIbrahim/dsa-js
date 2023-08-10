@@ -4,7 +4,7 @@ type Node<T> = {
 }
 
 /**
- * Retain: Stack Mental Model (Linked List)
+ * Memorize: Stack Mental Model (Linked List)
  *
  * LIFO - Last In - First Out
  * Stack is vertical. Example: Lay's Stax

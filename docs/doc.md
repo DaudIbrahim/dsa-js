@@ -192,7 +192,7 @@ Math
 
 Midpoint - find the midpoint
 
-Index: *Offset by One* | *Retain*
+Index: *Offset by One* | *Memorize*
 
 - *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
 
@@ -301,9 +301,9 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 ### Keyword
 
-- Retain
+- Understand by solving using Pen-Paper &
 
-- Pen-Paper
+- Memorize
 
 ### Misc
 
@@ -311,7 +311,7 @@ This type of linked list combines the features of a doubly linked list and a cir
 
   - Start by solving for the base case
 
-  -
+  - Walk through the algorithm like ["Animator vs. Animation"](https://youtu.be/B1J6Ou4q8vE)
 
 - middle-element
 - nested loop

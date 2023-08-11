@@ -27,3 +27,19 @@
 - Revisit Arrays at the end `dev-daud`
 
 - Recursion
+
+  - Path Finding: MazeSolver
+
+- Quick Sort
+
+  - Quick Sort Algorithm implementation **Divide & Conquer Technique**
+
+    - A silly memory hook:
+
+      - Geospatial Data Discovery Service - (GDDS)
+
+      - Greedy | Divide & Conquer | Dynamic | Backtracking - (GDDS)
+
+        - Learning the D - Divide & Conquer Technique in here
+
+- Doubly Linked List

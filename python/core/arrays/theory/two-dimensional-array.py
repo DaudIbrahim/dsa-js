@@ -63,7 +63,6 @@ def traverse_two_d_array(array):
 
 def search_element_in_two_d_array(array, value):
     # Searching for an element in Two Dimensional Array
-    # [x] - Implemented Linear Search, update later with Binary Search
     for i in range(len(array)):
         for j in range(len(array[i])):
             if (array[i, j] == value):

@@ -52,13 +52,48 @@ Problem sets are great ways to provide students with the practice necessary to g
 
 ## Recursion
 
-[Recursive Leap of Faith](https://www.youtube.com/watch?v=rf6uf3jNjbo&t=620s)
+### Refer to the three key ideas that you have worked on before
 
-### Relationship between Induction & Recursion?
+1. Mathematical Induction
+2. Recursive Leap of faith - Towers of Hanoi
+3. Fibonacci Sequenct - Rcursion & Memoization
 
-An answer from [stackoverflow](https://stackoverflow.com/a/11143870/7031530)
+### Memorize Recursion Concepts
 
-#### Sequence
+#### Case
+
+- Base Case
+- Inductive Case
+
+#### Recursion: Function
+
+Every function has the following
+
+- rA - return address
+- rV - return value
+- A - argument
+
+#### Recursion: Operation
+
+- Pre - doing some operation before recursion
+- Recursion - the recursion call
+- Post - after the recursion call
+
+```js
+// You're gonna really want to understand this. Is that recursion can actually be broken down or the recurse can actually be broke down into three steps, all right? So the recurse thing can be into three steps. You have a pre, which means you can do something before you recurse.
+
+// In our case this was literally n+, right? We took n and we added it and then we did the recursion part. So this is kind of a pre thing. Now then, we recurse, which actually does the calling of the function, right? And then there's actually an availability for some sort of post operation.
+
+// Does that make sort of sense? We can do something else after recursing. So we didn't actually have to return here, right? We don't have to return, we could have said, hey, out equals this, then console logged something, and then returned out, right? Which would have actually, let's say we console logged, ley's just say we, here I'll just break the word log.
+
+// - [theprimeagen recursion](https://theprimeagen.github.io/fem-algos/lessons/recursion/recursion)
+```
+
+- [Pre Operation - Recursion - Post Operation Example in Code - MazeSolver](../kata-machine//src//day1/MazeSolver.ts)
+
+## [Mathematical Induction & Recursion (Relationship)](https://stackoverflow.com/a/11143870/7031530 "stackoverflow")
+
+### Sequence
 
 You Start with a Sequence.
 
@@ -66,7 +101,7 @@ You identify a pattern that seems to hold true for every term in the Sequence.
 
 Make use of Mathematical Induction to prove that the pattern holds true for every term down the Sequence.
 
-#### Method of Proof by Mathematical Induction
+### Method of Proof by Mathematical Induction
 
     - Step 1. Basis Step.
         Show that P(a) is true. Pattern that seems to hold true from a.
@@ -81,7 +116,7 @@ Make use of Mathematical Induction to prove that the pattern holds true for ever
                 Notice: a, a+1, a+2, a+3, ... k, k+1
                             for every integer k >= a, that p(k) is true
 
-#### Recursion (Mathematical)
+### Recursion (Mathematical)
 
     Start with Sequence: Each term has a recurrence relation with the previous term.
 
@@ -92,19 +127,19 @@ Make use of Mathematical Induction to prove that the pattern holds true for ever
             As previously mentioned for defining the nth term of the Sequence you refer (nth - 1), (nth -2) ... an so forth until reaching the initial term that starts solving the problem for defining the nth term of the Sequence
                 Notice: n, n-1, n-2, n-3, ... Initial Term
 
-#### Recursive Specification
+### Recursive Specification
 
     Recursive Relation
     Initial Values
 
-#### Combine
+### Combine
 
     - Sequence.
     - Recursive Specification: Recurrence Ralation & Initial Condition.
     - Explicit Formula: Solution to the Recurrence Ralation.
     - Correctedness of the formula proven by Mathematical Induction.
 
-#### Recursive Leap of Faith
+### [Recursive Leap of Faith](https://www.youtube.com/watch?v=rf6uf3jNjbo&t=620s)
 
 The most difficult part of solving problems recursively is to figure out how knowing the solution to the smaller problems of the same type as the orignal problem will give you a solution to the problem as a whole.
 
@@ -112,7 +147,7 @@ You suppose you knwo the solutions to the smaller subproblems, the supposition t
 
 The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by mathematical induction.
 
-#### Relationship between Mathematical Induction & Recursion?
+### Relationship between Mathematical Induction & Recursion?
 
 - Sequence
 
@@ -152,12 +187,7 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
 
     You use mathematical induction to check the correctness of your formula
 
-#### Recursion Explore
-
-- Tail Recursion
-- Why Recursion is not always the best choice - YT
-
-##### Reference
+#### Reference
 
 - [Discrete Mathematics with Applications](https://www.amazon.com/dp/1337694193/ "Susanna S. Epp")
 
@@ -301,7 +331,9 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 ### Keyword
 
-- Understand by solving using Pen-Paper &
+- Understand (Understanding solutions through solving using paper and pen)
+
+- Refer
 
 - Memorize
 
@@ -314,4 +346,10 @@ This type of linked list combines the features of a doubly linked list and a cir
   - Walk through the algorithm like ["Animator vs. Animation"](https://youtu.be/B1J6Ou4q8vE)
 
 - middle-element
+
 - nested loop
+
+- [x]
+
+  - add the compiler book mentioned in Reddit that actually implements a majority of the DSA material learned in here
+  

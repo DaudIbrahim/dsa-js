@@ -6,7 +6,7 @@ const directionArray = [
     [0, -1], // right
 ]
 
-function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], result: Point[]): boolean {
+function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], resultPath: Point[]): boolean {
     /**
      * Cover The Base Cases
      * 1. Hit a wall
@@ -14,6 +14,8 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
      * 3. Have seen it
      * 4. Found the End
      */
+
+    // y is the column & x is the row of your 2D Array
     const { y, x } = curr
 
     // Base Case - Off the map
@@ -33,33 +35,42 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
 
     // Base Case - Found the End
     if (y === end.y && x === end.x) {
-        result.push({ y, x })
+        resultPath.push({ y, x })
         return true
     }
 
-    // Pre
+    /** 3 Recurse Operations */
+
+    // Pre Operation - Doing some operation before recursion
     seen[y][x] = true
-    result.push({ y, x })
+    resultPath.push({ y, x })
 
-    // Three Recurse Actions
     for (let i = 0; i < directionArray.length; i++) {
-
-        // recurse - this is where you start moving from the starting point
         const cp = { y: curr.y + directionArray[i][0], x: curr.x + directionArray[i][1] }
-        if (walk(maze, wall, cp, end, seen, result)) {
-            // Memorize: Break out of for Loop when I have found true
+
+        // Recursion Operation - The recursion call
+        const haveFoundTheEnd = walk(maze, wall, cp, end, seen, resultPath)
+
+        /**
+         * Memorize
+         * Break out of for Recursion 🚩 when I have found true
+         * you cannot just keep on recursion once you found the end
+         */
+        if (haveFoundTheEnd) {
             return true
+            // & now the functions begin to return to their return address with return value of true
+            // when its false: it returns to the return address with return value of false - In a way implementing a kind of undo
         }
     }
 
-    // post
-    result.pop()
+    // Post - After the recursion call
+    resultPath.pop()
 
     return false
 }
 
 export default function maze_solver(maze: string[], wall: string, start: Point, end: Point): Point[] {
-    const result: Point[] = []
+    const resultPath: Point[] = []
     const seen: boolean[][] = []
 
     // Fill Seen
@@ -68,13 +79,6 @@ export default function maze_solver(maze: string[], wall: string, start: Point, 
         for (let j = 0; j < maze[i].length; j++) { seen[i].push(false) }
     }
 
-    walk(maze, wall, start, end, seen, result)
-    return result
+    walk(maze, wall, start, end, seen, resultPath)
+    return resultPath
 }
-
-const maze = [
-    "  x",
-];
-
-const result = maze_solver(maze, "x", { y: 0, x: 1 }, { y: 0, x: 0 });
-console.log(result)

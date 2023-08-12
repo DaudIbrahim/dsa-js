@@ -1,16 +1,16 @@
 # Data Structures and Algorithms
 
-Data Structures and Algorithms in Python
+*The goal of programming is to create solutions, not to type on a keyboard. Generating a solution that is both legitimate and machine-readable, and then effectively handing that solution, the set of instructions, to the computer to process. In essence, the machine runs the computation on your given solution, and you are responsible for checking the accuracy of your solution. I could go on about this indefinitely, but you get the idea. You create the solutions, and the computer computes them. This is when proofs enter the picture to demonstrate the correctness of a particular algorithmic formula.*
 
-Grow a core competency in *Translating Abstraction into Concreteness*
+- Adopt the mindset of *Think First; Code Second*
 
-Adopt the mindset of *Think First; Code Second*
+- Grow a core competency in *Translating Abstraction into Concreteness*
 
-Visualizing: Creating your problems first on a whiteboard, and then being able to translate abstraction into concreteness.
+- Visualizing: Creating your problems first on a whiteboard, and then being able to translate abstraction into concreteness.
 
-- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+  - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
-- [VisuAlgo](https://visualgo.net/en)
+  - [VisuAlgo](https://visualgo.net/en)
 
 ## PSET
 
@@ -329,7 +329,49 @@ This type of linked list combines the features of a doubly linked list and a cir
 
       Succeeding Node & Preceding node
 
-### Keyword
+## Sort
+
+### Quick Sort
+
+- Divide & Conquer
+
+  - Partition the array into two parts, partition one to the left and other to the right
+
+    - There are more than one ways to pivotPartition
+
+      - I am using the approach from [VisuAlgo NUS](https://visualgo.net/en/sorting)
+
+        - Memorize the approach from [VisuAlgo NUS](https://visualgo.net/en/sorting) to solve for pivotPartition
+
+          - **< Pivot <=**
+
+          - **The pivotPartition Transforms [5, 1, 10, 3, 7] into [< Pivot <=]**
+
+## GDDB
+
+Very silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the following four techniques:
+
+### Greedy
+
+- Greedy
+
+### Divide and Conquer
+
+- Binary Searh
+
+- Quicksort
+
+### Dynamic
+
+- Dynamic
+
+### Backtracking
+
+- Backtracking
+
+### Misc
+
+#### Keywords
 
 - Understand (Understanding solutions through solving using paper and pen)
 
@@ -337,7 +379,7 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 - Memorize
 
-### Misc
+#### Disorderly
 
 - Start by fiding a solution for the smallest problem
 
@@ -347,9 +389,10 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 - middle-element
 
+- offset 🌟
+
 - nested loop
 
 - [x]
 
   - add the compiler book mentioned in Reddit that actually implements a majority of the DSA material learned in here
-  

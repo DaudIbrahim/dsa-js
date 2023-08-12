@@ -1,6 +1,6 @@
 # Catalogue
 
-## Algorithms & Data Structures | Learn Algorithms with TypeScript for Interviews | Frontend Masters | ThePrimeagen
+## [Algorithms & Data Structures | Learn Algorithms with TypeScript for Interviews | Frontend Masters | ThePrimeagen](https://frontendmasters.com/courses/algorithms/)
 
 - Introduction
 
@@ -36,10 +36,116 @@
 
     - A silly memory hook:
 
-      - Geospatial Data Discovery Service - (GDDS)
+      - Greatly Designed Data Base - (GDDB)
 
       - Greedy | Divide & Conquer | Dynamic | Backtracking - (GDDS)
 
-        - Learning the D - Divide & Conquer Technique in here
+        - Learning D&C - Divide & Conquer Technique
 
 - Doubly Linked List
+
+## [The Complete Data Structures and Algorithms Course in Python](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
+
+- Introduction
+
+- Big O Notation
+
+- Arrays
+
+- Python Lists
+
+- PROJECT 1 - Arrays/Lists
+
+- Array/List - CODING EXERCISES - LeetCode - Cracking FAANG Interview Questions
+
+- Top 10 Big O Interview Questions (Amazon, Facebook, Apple and Microsoft)
+
+- Dictionaries
+
+- Dictionary - CODING EXERCISES
+
+- Tuples
+
+- Tuple - CODING EXERCISES
+
+- OOP Concepts - Classes, Objects, Attributes and Methods
+
+- Linked List
+
+- SLL - CODING EXERCISES
+
+- Singly Linked List - LEETCODE Questions
+
+- Circular Singly Linked List
+
+- Doubly Linked List
+
+- Circular Doubly Linked List
+
+- Cracking Linked List Interview Questions (Amazon, Facebook, Apple and Microsoft)
+
+- Stack
+
+- Queue
+
+- Cracking Stack and Queue Interview Questions (Amazon,Facebook, Apple, Microsoft)
+
+- Recursion
+
+- Cracking Recursion Interview Questions
+
+- Bonus CHALLENGING Recursion Problems
+
+- Tree / Binary Tree
+
+- Binary Search Tree
+
+- AVL Tree
+
+- Binary Heap
+
+- Trie
+
+- Hashing
+
+- Sort Algorithms
+
+- Searching Algorithms
+
+- Graph Algorithms
+
+- Graph Traversal - Breadth First Search and Depth First Search
+
+- Topological Sort Algorithm
+
+- Single Source Shortest Path
+
+- Graph Algorithms - Dijsktra's Algorithm
+
+- Graph Algorithms -Bellman Ford Algorithm
+
+- All Pairs Shortest Path
+
+- Graph Algorithms - Floyd Warshall Algorithm
+
+- Minimum Spanning Tree (Disjoint Set)
+
+- Graph Algorithms - Kruskal and Prim's Algorithms
+
+- Cracking Trees and Graphs Top Interview Questions (Apple, Amazon, Facebook)
+
+- Greedy Algorithms
+
+- Divide and Conquer Algorithms
+
+- Dynamic Programming
+
+- CHALLENGING Dynamic Programming Problems
+
+- A Recipe for Problem Solving
+
+- Backtracking
+
+- The Wild West
+
+- My Other Courses

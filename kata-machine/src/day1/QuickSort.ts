@@ -4,8 +4,11 @@
 const pivotPartition = (arr: number[], startIdx: number, endIdx: number): number => {
     let i = startIdx + 1
 
-    // Memorize importance of `offset` | you made a mistake here for not accounting for offset
-    // Refer `offset` : the count must include the offset
+    /**
+     * Memorize the importance of `offset`
+     * you made a mistake here for not accounting for offset in countIdx
+     */
+    /** Refer `offset` : the count must include the offset */
     let countIdx = startIdx
 
     for (; i <= endIdx; i++) {

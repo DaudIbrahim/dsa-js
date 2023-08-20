@@ -44,6 +44,18 @@
 
 - Doubly Linked List
 
+  - Implementation of Doubly Linked List
+
+- Trees
+
+- Tree Search
+
+- Heap
+
+- Graphs
+
+- Maps and LRU
+
 ## [The Complete Data Structures and Algorithms Course in Python](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
 
 - Introduction

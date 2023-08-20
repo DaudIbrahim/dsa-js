@@ -218,31 +218,6 @@ Math
 - [Logarithms](https://youtu.be/ntBWrcbAhaY?t=180)
 - Big O Notation
 
-## Binary Search
-
-Midpoint - find the midpoint
-
-Index: *Offset by One* | *Memorize*
-
-- *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
-
-A note on Set Theory
-
-- Closed Interval
-
-  - [a, b] - a & b both are included in the interval
-
-- Half-open Interval
-
-  - [a, b) - a is included & b is not, b is excluded from the interval
-
-    Half Interval Python Example
-
-    ```py
-    for i in range(0, 5):
-      print(i) # 0, 1, 2, 3, 4, 5
-    ```
-
 ## Array
 
 Random Access with an ArrayList. Example - Give me index three.
@@ -329,6 +304,33 @@ This type of linked list combines the features of a doubly linked list and a cir
 
       Succeeding Node & Preceding node
 
+## Search
+
+### Binary Search
+
+Midpoint - find the midpoint
+
+Index: *Offset by One* | *Memorize*
+
+- *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
+
+A note on Set Theory
+
+- Closed Interval
+
+  - [a, b] - a & b both are included in the interval
+
+- Half-open Interval
+
+  - [a, b) - a is included & b is not, b is excluded from the interval
+
+    Half Interval Python Example
+
+    ```py
+    for i in range(0, 5):
+      print(i) # 0, 1, 2, 3, 4, 5
+    ```
+
 ## Sort
 
 ### Quick Sort
@@ -347,9 +349,110 @@ This type of linked list combines the features of a doubly linked list and a cir
 
           - **The pivotPartition Transforms [5, 1, 10, 3, 7] into [< Pivot <=]**
 
-## GDDB
+## [Graph Theory Quintessential](https://youtube.com/playlist?list=PLpXOY-RxVRTPPVLBP6-sz6CMWxhtrI-v_)
 
-Very silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the following four techniques:
+- Intro
+- Depth First
+- Breadth First
+- The Traveling Salesman Problem
+
+## Graph Traversla vs Search
+
+Graphs are a more general data structure that can include trees as a special case.
+
+Tree traversal and tree search are two fundamental operations used in working with tree data structures, such as binary trees or graphs. While they both involve exploring the elements within a tree, they serve different purposes and have distinct characteristics:
+
+- [**Tree Traversal**](https://youtu.be/b_NjndniOqY)
+
+Tree traversal and tree search are two fundamental operations used in working with tree data structures, such as binary trees or graphs. While they both involve exploring the elements within a tree, they serve different purposes and have distinct characteristics:
+
+  **Purpose**: Tree traversal is the process of visiting and examining all nodes in a tree or graph in a systematic way without any specific goal of finding a particular node. The primary objective is to visit every node once.
+
+  **Types**: There are three common types of tree traversal:
+
+  There are three common types of tree traversals: preorder, inorder, and postorder. Each traversal has a different order in which it visits nodes. Let's explore each of them in more detail:
+
+  1. **Preorder Traversal**:
+      - **Order of Visitation**: In preorder traversal, you visit the current node before its children. The order is as follows:
+        1. Visit the current node.
+        2. Traverse the left subtree (recursively).
+        3. Traverse the right subtree (recursively).
+      - **Common Uses**:
+        - Preorder traversal is often used for copying a tree or generating a prefix expression from an expression tree.
+        - It's also useful for certain types of binary tree constructions.
+
+  2. **Inorder Traversal**:
+      - **Order of Visitation**: In inorder traversal, you visit the left child, then the current node, and finally the right child. The order is as follows:
+        1. Traverse the left subtree (recursively).
+        2. Visit the current node.
+        3. Traverse the right subtree (recursively).
+      - **Common Uses**:
+        - Inorder traversal is commonly used for binary search trees (BSTs) to retrieve elements in sorted order.
+        - It helps in evaluating expressions represented as binary expression trees (infix expressions).
+
+  3. **Postorder Traversal**:
+      - **Order of Visitation**: In postorder traversal, you visit the children of a node before visiting the node itself. The order is as follows:
+        1. Traverse the left subtree (recursively).
+        2. Traverse the right subtree (recursively).
+        3. Visit the current node.
+      - **Common Uses**:
+        - Postorder traversal is often used for tasks like deleting a tree because it ensures that you delete child nodes before their parent nodes.
+        - It can also be used for certain tree transformations and calculations.
+
+      Here's a simple example to illustrate these traversals on a binary tree:
+
+      ```plaintext
+              A
+            /   \
+            B     C
+          / \   / \
+          D   E F   G
+
+      Preorder Traversal: A, B, D, E, C, F, G
+      Inorder Traversal: D, B, E, A, F, C, G
+      Postorder Traversal: D, E, B, F, G, C, A
+      ```
+
+      The order in which nodes are visited in each traversal type is crucial for various operations involving trees, and choosing the right traversal depends on the specific problem or task you want to solve.
+
+- **Tree Search**:
+
+  - **Purpose**: Tree search involves finding a specific node or element within a tree or graph, often with a particular goal or criteria in mind. The objective is to locate a target node efficiently.
+
+  - **Types**: There are two common types of tree search:
+
+    - **Breadth-First Search (BFS)**: BFS starts at the root node and explores all neighbor nodes at the current depth level before moving on to nodes at the next depth level. It's typically used for finding the shortest path or for exploring all possible paths in an unweighted graph.
+
+      - **Exploration Strategy**: BFS explores a graph by visiting all neighbors of a node before moving on to their children. It explores nodes at the current depth level before proceeding to nodes at the next depth level.
+
+      - **Data Structure**: BFS uses a queue data structure to keep track of nodes to visit. Nodes are enqueued (added to the back of the queue) when they are discovered and dequeued (removed from the front of the queue) when they are visited.
+
+      - **Use Cases**:
+        - Finding the shortest path in an unweighted graph: Since BFS explores nodes level by level, the first time you encounter the target node, you can be sure that it is the shortest path.
+        - Exploring all possible paths from a source node to a target node.
+        - Discovering connected components in an unweighted graph.
+
+      - **Completeness**: BFS is complete, meaning it will find a target node if it exists, provided the graph is connected.
+
+    - **Depth-First Search (DFS)**: DFS explores as far as possible along a branch before backtracking. It can be implemented using recursion or a stack data structure. DFS is often used for tasks like checking if a path exists between two nodes or for topological sorting.
+
+      - **Exploration Strategy**: DFS explores a graph by following a single branch as deeply as possible before backtracking. It explores one branch entirely before moving on to the next sibling branch.
+
+      - **Data Structure**: DFS can be implemented using either recursion or a stack data structure. In a recursive DFS, each recursive call explores a node's children.
+
+      - **Use Cases**:
+        - Determining whether a path exists between two nodes.
+        - Topological sorting: Ordering nodes in a directed acyclic graph (DAG) such that for every directed edge (u, v), node u comes before node v in the ordering.
+        - Finding cycles in a graph.
+        - Generating all possible solutions in problems like maze-solving or the N-Queens problem.
+
+      - **Completeness**: DFS may not be complete in all cases, especially if there are cycles in the graph. It can get stuck in an infinite loop if not carefully implemented.
+
+  In summary, the key conceptual difference between tree traversal and tree search lies in their primary objectives and how they navigate the tree structure. Traversal aims to visit all nodes in a systematic way, while search aims to find a specific node or satisfy a particular condition efficiently. The choice between traversal and search depends on the problem you're trying to solve with the tree or graph data structure. In summary, BFS explores nodes level by level, making it suitable for tasks like finding the shortest path, while DFS explores one branch deeply before backtracking, making it suitable for tasks like finding paths and detecting cycles. The choice between BFS and DFS depends on the specific problem and the characteristics of the graph being traversed or searched.
+
+## [Greedy, Divide/Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
+
+Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the following four techniques:
 
 ### Greedy
 

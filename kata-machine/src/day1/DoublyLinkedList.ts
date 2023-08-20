@@ -6,8 +6,10 @@ type Node<T> = {
 
 /**
  * I made three mistakes:
+ * - in _getCurrentNodeAtIndex mistake in loop termination logic (i < nowCorrected)
  * - changing length before _getCurrentNodeAtIndex
  * - removeAt - not taking into account the head node | `Refer` Take into careful consideration the head & tail nodes
+ * You did not learn entirely from the resource and skipped using a tail in your DoublyLinkedList
  */
 
 export default class DoublyLinkedList<T> {
@@ -39,6 +41,7 @@ export default class DoublyLinkedList<T> {
             curr = curr.next
         }
 
+        // [ ] - TS learn more what is as & difference between as and colon :
         return curr as Node<T>
     }
 
@@ -133,20 +136,17 @@ export default class DoublyLinkedList<T> {
     remove(item: T): T | undefined {
         if (this.length === 0) return undefined
 
-        let i = 0
         let curr = this.head
-        let found = false
 
-        for (; curr && i < this.length; i++) {
+        for (let i = 0; curr && i < this.length; i++) {
             if (curr.value === item) {
-                found = true
                 break
             } else {
                 curr = curr.next ?? undefined
             }
         }
 
-        if (found === false || !curr) return undefined
+        if (curr === undefined) return undefined
 
         // A tad bit repeat - Break the old links
         if (this.head === curr) this.head = curr.next ?? undefined

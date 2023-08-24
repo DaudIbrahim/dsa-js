@@ -60,24 +60,23 @@ Problem sets are great ways to provide students with the practice necessary to g
 
 ### Memorize Recursion Concepts
 
-#### Case
+1. *Case*
+    - Base Case
+    - Inductive Case
 
-- Base Case
-- Inductive Case
+2. *Function Properties. Every function has the following:*
 
-#### Recursion: Function
+    - Return Address - rA
+    - Return Value- rV
+    - Argument - A
 
-Every function has the following
+3. *Recursion: Actions*
 
-- rA - return address
-- rV - return value
-- A - argument
+    - Pre - performing some Action before recursion
+    - Recursion - the recursion call
+    - Post - performing some Action after the recursion call
 
-#### Recursion: Operation
-
-- Pre - doing some operation before recursion
-- Recursion - the recursion call
-- Post - after the recursion call
+  Similar example you can think of traversing a tree by Pre-Order, In-Order, Post-Order
 
 ```js
 // You're gonna really want to understand this. Is that recursion can actually be broken down or the recurse can actually be broke down into three steps, all right? So the recurse thing can be into three steps. You have a pre, which means you can do something before you recurse.
@@ -414,6 +413,11 @@ Tree traversal and tree search are two fundamental operations used in working wi
       ```
 
       The order in which nodes are visited in each traversal type is crucial for various operations involving trees, and choosing the right traversal depends on the specific problem or task you want to solve.
+
+      So in summary, always go from the root in counterclockwise direction around the tree.
+      - For Pre-Order, print the nodes as you visit them for the first time.
+      - For In-Order, print the nodes only when you visit them for the second time.
+      - For Post-order, print the nodes when you visit them for the last time.
 
 - **Tree Search**:
 

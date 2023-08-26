@@ -34,21 +34,19 @@
 
   - Quick Sort Algorithm implementation **Divide & Conquer Technique**
 
-    - A silly memory hook:
-
-      - Greatly Designed Data Base - (GDDB)
-
-      - Greedy | Divide & Conquer | Dynamic | Backtracking - (GDDS)
-
-        - Learning D&C - Divide & Conquer Technique
-
 - Doubly Linked List
 
   - Implementation of Doubly Linked List
 
 - Trees
 
+  - Binary Tree Traversal: Pre-Order, In-Order & Post-Order
+
 - Tree Search
+
+  - Breadth First Search
+
+  - Compare Two Binary Trees
 
 - Heap
 

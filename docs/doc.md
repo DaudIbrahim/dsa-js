@@ -438,7 +438,7 @@ Tree traversal and tree search are two fundamental operations used in working wi
 
       - **Completeness**: BFS is complete, meaning it will find a target node if it exists, provided the graph is connected.
 
-    - **Depth-First Search (DFS)**: DFS explores as far as possible along a branch before backtracking. It can be implemented using recursion or a stack data structure. DFS is often used for tasks like checking if a path exists between two nodes or for topological sorting.
+    - **Depth-First Search (DFS)**: DFS explores as far as possible along a branch before backtracking. It can be implemented using recursion or a stack data structure. DFS is often used for tasks like checking if a path exists between two nodes or for topological sorting. **Depth-First preserves the shape of the traversal**
 
       - **Exploration Strategy**: DFS explores a graph by following a single branch as deeply as possible before backtracking. It explores one branch entirely before moving on to the next sibling branch.
 

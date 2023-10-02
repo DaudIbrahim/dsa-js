@@ -7,6 +7,7 @@ export default function bs_list(haystack: number[], needle: number): boolean {
      * Index: Offset by One
      * Check the middle element
      * low & high
+     * inclusive/exclusive [low, high)
      */
     let low = 0
     let high = haystack.length
@@ -26,15 +27,13 @@ export default function bs_list(haystack: number[], needle: number): boolean {
          * mid = 5 / 2
          * 
          * Memorize ThePrimeagen method of finding the mid point &
-         * Memorize inclusive/exclusive [low, hight) range(0, 5)
+         * Memorize inclusive/exclusive [low, high) range(0, 5)
          * 
          * Bothe mids are equal in their result.equation. In ThePrimeagen method low + Math.floor((high - low) / 2) `low as offset`
-         * Learn ThePrimeagen's mid method, this way you will remember about the offset
+         * Learn ThePrimeagen's mid method, this way you will Memorize about the offset
          * Good memory hook for Offset by one, where highest is exclusive and midpoint uses low as an offset as well
-         * Additionally note AWS for pagination includes offet, MySQL in its query for pagination makes use of  OFFSET
-         *
+         * Additionally note AWS for pagination includes offet, MySQL in its query for pagination makes use of OFFSET
          */
-
         const mid = low + Math.floor((high - low) / 2)
         const val = haystack[mid]
 

@@ -70,6 +70,8 @@ Problem sets are great ways to provide students with the practice necessary to g
     - Return Value- rV
     - Argument - A
 
+    **Functions return: Sometimes you overlook this, in recursion we call functions recursively. Memorize the fact that a function always returns, regardless of whether it returns a void or a value. In a recursive manner you build up the stack with function call - you hit a base and the functions start to return, effectively emptying the call stack by popping of each function.**
+
 3. *Recursion: Actions*
 
     - Pre - performing some Action before recursion
@@ -303,6 +305,14 @@ This type of linked list combines the features of a doubly linked list and a cir
 
       Succeeding Node & Preceding node
 
+## Stack
+
+- *Stack - DFS - LIFO - ⬇*
+
+## Queue
+
+- *Queue - BFS - FIFO - ➡*
+
 ## Search
 
 ### Binary Search
@@ -419,11 +429,11 @@ Tree traversal and tree search are two fundamental operations used in working wi
       - For In-Order, print the nodes only when you visit them for the second time.
       - For Post-order, print the nodes when you visit them for the last time.
 
-- **Tree Search**:
+- **Graph/Tree Search**:
 
-  - **Purpose**: Tree search involves finding a specific node or element within a tree or graph, often with a particular goal or criteria in mind. The objective is to locate a target node efficiently.
+  - **Purpose**: Tree search involves finding a specific node or element within a tree or graph, often with a particular goal or criteria in mind. The objective is to locate a target node efficiently. [The algorithms in this class are Depth First Search (DFS), Breadth First Search (BFS), and Dijkstra’s algorithm. If you have additional time, I recommend you learn the A* algorithm as well.](https://levelup.gitconnected.com/must-know-algorithms-for-coding-interviews-937d807064e0#:~:text=The%20algorithms%20in%20this%20class%20are%20Depth%20First%20Search%20(DFS)%2C%20Breadth%20First%20Search%20(BFS)%2C%20and%20Dijkstra%E2%80%99s%20algorithm.%20If%20you%20have%20additional%20time%2C%20I%20recommend%20you%20learn%20the%20A*%20algorithm%20as%20well.)
 
-  - **Types**: There are two common types of tree search:
+  - **Types**: Here are two common types of tree search:
 
     - **Breadth-First Search (BFS)**: BFS starts at the root node and explores all neighbor nodes at the current depth level before moving on to nodes at the next depth level. It's typically used for finding the shortest path or for exploring all possible paths in an unweighted graph.
 
@@ -454,6 +464,28 @@ Tree traversal and tree search are two fundamental operations used in working wi
 
   In summary, the key conceptual difference between tree traversal and tree search lies in their primary objectives and how they navigate the tree structure. Traversal aims to visit all nodes in a systematic way, while search aims to find a specific node or satisfy a particular condition efficiently. The choice between traversal and search depends on the problem you're trying to solve with the tree or graph data structure. In summary, BFS explores nodes level by level, making it suitable for tasks like finding the shortest path, while DFS explores one branch deeply before backtracking, making it suitable for tasks like finding paths and detecting cycles. The choice between BFS and DFS depends on the specific problem and the characteristics of the graph being traversed or searched.
 
+## Binary Tree
+
+- Left Node
+- Right Node
+
+[Example of Binary Tree in Code](../kata-machine/src/__tests__/tree.ts)
+
+## Binary Heap
+
+Super cool data strcture that changes you perspective. [That has to do with the ability to change your perspective.](https://youtu.be/ZQElzjCsl9o?t=324)
+
+[Heap is the data structure best suited to implement Priority Queues.](https://anmolsehgal.medium.com/heap-vs-priority-queues-vs-queues-b03398312c87#:~:text=Heap%20is%20the%20data%20structure%20best%20suited%20to%20implement%20Priority%20Queues.)
+
+[What is a Binary Heap (Concept)](https://youtu.be/AE5I0xACpZs?si=y-Oh_rpBCfk1MT9i)
+
+### Details
+
+The problem that is being solved - create a queue that has an order of priority for its elements
+
+Binary Heaps are implemented as a complete tree ("filling each level from left to right")
+We are not Traversing instead accessing the parent and child by making use of indexes and mathematical formulas (pattern -> formula)
+
 ## [Greedy, Divide/Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
 
 Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the following four techniques:
@@ -464,9 +496,15 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the 
 
 ### Divide and Conquer
 
-- Binary Searh
+Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide & Conquer**
 
-- Quicksort
+- Divide & Conquer
+- Split in half
+- Go: Left || Right
+
+- Binary Searh
+- Quick Sort
+- Binary Tree
 
 ### Dynamic
 
@@ -476,17 +514,31 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the 
 
 - Backtracking
 
-### Misc
+## [Patterns for Solving Data Structures and Algorithms Problems](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
 
-#### Keywords
+### Pattern 0: Frequency Counter Pattern
 
-- Understand (Understanding solutions through solving using paper and pen)
+### Pattern 1: Multiple Pointers by Colt Stelee
+
+[Creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition](https://cs.slides.com/colt_steele/problem-solving-patterns#/33)
+
+Hint: useful in solving problems related to finding **Pairs**
+
+### Pattern 2: Sliding Window
+
+Hepls in solving *Hint* **Contiguous**
+
+In many problems dealing with an array (or a LinkedList), we are asked to find or calculate something among all the contiguous subarrays (or sublists) of a given size.
+
+## Misc
+
+### Keywords
 
 - Refer
 
 - Memorize
 
-#### Disorderly
+### Disorderly
 
 - Start by fiding a solution for the smallest problem
 
@@ -500,6 +552,8 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the 
 
 - nested loop
 
+  - nested loops are to be avoided wherever and as much as possible use two pointers, sliding window, & fast and slow pointers
+
 - [x]
 
-  - add the compiler book mentioned in Reddit that actually implements a majority of the DSA material learned in here
+  - Add the compiler book mentioned in Reddit that actually implements a majority of the DSA material learned in here

@@ -6,9 +6,11 @@ const pivotPartition = (arr: number[], startIdx: number, endIdx: number): number
 
     /**
      * Memorize the importance of `offset`
-     * you made a mistake here for not accounting for offset in countIdx
+     * `offset` in Quick Sort to account for the left partition for example 0 to mid and right partition mid to end
+     * You made a mistake here for not accounting for offset in countIdx
+     *
+     * Refer `offset` : the countIdx must include the offset
      */
-    /** Refer `offset` : the count must include the offset */
     let countIdx = startIdx
 
     for (; i <= endIdx; i++) {

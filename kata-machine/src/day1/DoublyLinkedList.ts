@@ -31,7 +31,7 @@ export default class DoublyLinkedList<T> {
          * - Run Loop: current points to the next node
          * - Increment i, now i = 1
          * - Condition is false i < idx : 1 < 1
-         * The ordering is important to remember
+         * The ordering is important to Memorize
          * - at the end as the loop terminates i is at 1, 
          * - and our node points to next of head node that is at index 1 in this example
          */

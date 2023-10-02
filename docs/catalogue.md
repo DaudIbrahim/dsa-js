@@ -48,7 +48,15 @@
 
   - Compare Two Binary Trees
 
+  - Binary Search Tree (BST). Discussion of concept/idea, no concrete implementation.
+
+  - Depth First Search On BST
+
 - Heap
+
+  - Implement Heap
+
+  - Implementing Tries
 
 - Graphs
 
@@ -112,7 +120,11 @@
 
 - AVL Tree
 
+- FIXME: Learn Red Black Trees
+
 - Binary Heap
+
+- FIXME: Learn [Fibonacci Heap](https://youtu.be/6JxvKfSV9Ns?si=N6F7ex9uDTo1xEcD)
 
 - Trie
 

@@ -22,7 +22,7 @@ Problem Set
 
 ### Learning Problems `Approach`
 
-It is more important to be able to [recognize a problem](https://qr.ae/priZWZ "John Byrd"), than to remember an algorithm that solves it.
+It is more important to be able to [recognize a problem](https://qr.ae/priZWZ "John Byrd"), than to Memorize an algorithm that solves it.
 
 - Learn/Recogize Problems
 - Identify Patterns
@@ -424,7 +424,7 @@ Tree traversal and tree search are two fundamental operations used in working wi
 
       The order in which nodes are visited in each traversal type is crucial for various operations involving trees, and choosing the right traversal depends on the specific problem or task you want to solve.
 
-      So in summary, always go from the root in counterclockwise direction around the tree.
+      [So in summary, always go from the root in counterclockwise direction around the tree.](https://www.youtube.com/watch?v=WLvU5EQVZqY&lc=UgxwHLh8RDXYgk1hHyp4AaABAg.9YEq1NFsZT09toOL6s_7fS)
       - For Pre-Order, print the nodes as you visit them for the first time.
       - For In-Order, print the nodes only when you visit them for the second time.
       - For Post-order, print the nodes when you visit them for the last time.
@@ -486,9 +486,33 @@ The problem that is being solved - create a queue that has an order of priority 
 Binary Heaps are implemented as a complete tree ("filling each level from left to right")
 We are not Traversing instead accessing the parent and child by making use of indexes and mathematical formulas (pattern -> formula)
 
+### Traversal
+
+It is not exactly a tree traversal, rather we use mathematical formula to access left and right child; & parent from child
+
+- Left Child
+
+  - 2i + 1
+
+- Right Child
+
+  - 2i + 2
+
+- Parent
+
+  - (i - 1) / 2
+
+### Operation
+
+- Insert: Heapify Up
+
+- Delete: Heapify Down
+
+  - Memorize to compare children nodes before so that you heapify down to the correct node, in case of min heap, heapify down to the smaller node; this ensures that the the node with the samllest value remains at the top
+
 ## [Greedy, Divide/Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
 
-Silly memory hook: Greatly Designed Data Base - (GDDB) in order to remember the following four techniques:
+Silly memory hook: Greatly Designed Data Base - (GDDB) in order to Memorize the following four techniques:
 
 ### Greedy
 
@@ -538,7 +562,7 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 
 - Memorize
 
-### Disorderly
+### Refer (Previously learned ideas & concepts)
 
 - Start by fiding a solution for the smallest problem
 
@@ -553,7 +577,3 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 - nested loop
 
   - nested loops are to be avoided wherever and as much as possible use two pointers, sliding window, & fast and slow pointers
-
-- [x]
-
-  - Add the compiler book mentioned in Reddit that actually implements a majority of the DSA material learned in here

@@ -21,7 +21,7 @@ export default class MinHeap {
         this.heapifyUp(this.data.length - 1)
     }
     delete(): number {
-        if (this.data.length === 0) return 0
+        if (this.data.length === 0) return -1
 
         const val = this.data[0]
         const newValue = this.data.pop()
@@ -39,33 +39,36 @@ export default class MinHeap {
         const parentVal = this.data[parentIndex]
 
         if (currentVal < parentVal) {
-            const temp = parentVal
             this.data[parentIndex] = currentVal
-            this.data[idx] = temp
+            this.data[idx] = parentVal
             this.heapifyUp(parentIndex)
         }
     }
 
     private heapifyDown(idx: number) {
-        if (idx >= this.data.length) return
-
         const leftChildIdx = this.leftChild(idx)
         const rightChildIdx = this.rightChild(idx)
+
+        if (idx >= this.data.length || leftChildIdx >= this.data.length) {
+            return
+        }
+
         const leftChildVal = this.data[leftChildIdx]
         const rightChildVal = this.data[rightChildIdx]
         const parentVal = this.data[idx]
 
         // Your mistake here was that you forgot to compare which child is smaller
+        // 1. First have to find the minimum child
+        // 2. Second you do the comparison
+        // 3. Finally you swap
 
         if (leftChildVal < rightChildVal && leftChildVal < parentVal) {
-            const temp = parentVal
             this.data[idx] = leftChildVal
-            this.data[leftChildIdx] = temp
+            this.data[leftChildIdx] = parentVal
             this.heapifyDown(leftChildIdx)
         } else if (rightChildVal < leftChildVal && rightChildVal < parentVal) {
-            const temp = parentVal
             this.data[idx] = rightChildVal
-            this.data[rightChildIdx] = temp
+            this.data[rightChildIdx] = parentVal
             this.heapifyDown(rightChildIdx)
         }
     }

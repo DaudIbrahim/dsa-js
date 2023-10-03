@@ -54,7 +54,7 @@
 
 - Heap
 
-  - Implement Heap
+  - [x] Implement Heap
 
   - Implementing Tries
 

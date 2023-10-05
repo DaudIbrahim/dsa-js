@@ -365,19 +365,58 @@ A note on Set Theory
 - Breadth First
 - The Traveling Salesman Problem
 
-## Graph Traversla vs Search
+## Traversal & Search
 
 Graphs are a more general data structure that can include trees as a special case.
 
-Tree traversal and tree search are two fundamental operations used in working with tree data structures, such as binary trees or graphs. While they both involve exploring the elements within a tree, they serve different purposes and have distinct characteristics:
+Traversal and Search are two fundamental operations used in working with graphs and trees.
+
+The key conceptual difference between traversal and search lies in their primary objectives and how they navigate the tree structure. Traversal aims to visit all nodes in a systematic way, while search aims to find a specific node or satisfy a particular condition efficiently. The choice between traversal and search depends on the problem you're trying to solve with the tree or graph data structure.
+
+- **Search**:
+
+  - **Purpose**: Search involves finding a specific node or element within a tree or graph, often with a particular goal or criteria in mind. The objective is to locate a target node efficiently. [The algorithms in this class are Depth First Search (DFS), Breadth First Search (BFS), and Dijkstra’s algorithm. If you have additional time, I recommend you learn the A* algorithm as well.](https://levelup.gitconnected.com/must-know-algorithms-for-coding-interviews-937d807064e0#:~:text=The%20algorithms%20in%20this%20class%20are%20Depth%20First%20Search%20(DFS)%2C%20Breadth%20First%20Search%20(BFS)%2C%20and%20Dijkstra%E2%80%99s%20algorithm.%20If%20you%20have%20additional%20time%2C%20I%20recommend%20you%20learn%20the%20A*%20algorithm%20as%20well.)
+
+  - **Types**: Here are two common types of tree search:
+
+    - **Breadth-First Search (BFS)**: BFS starts at the root node and explores all neighbor nodes at the current depth level before moving on to nodes at the next depth level. It's typically used for finding the shortest path or for exploring all possible paths in an unweighted graph.
+
+      - **Exploration Strategy**: BFS explores a graph by visiting all neighbors of a node before moving on to their children. It explores nodes at the current depth level before proceeding to nodes at the next depth level.
+
+      - **Data Structure**: BFS uses a queue data structure to keep track of nodes to visit. Nodes are enqueued (added to the back of the queue) when they are discovered and dequeued (removed from the front of the queue) when they are visited.
+
+      - **Use Cases**:
+        - Finding the shortest path in an unweighted graph: Since BFS explores nodes level by level, the first time you encounter the target node, you can be sure that it is the shortest path.
+        - Exploring all possible paths from a source node to a target node.
+        - Discovering connected components in an unweighted graph.
+
+      - **Completeness**: BFS is complete, meaning it will find a target node if it exists, provided the graph is connected.
+
+    - **Depth-First Search (DFS)**: DFS explores as far as possible along a branch before backtracking. It can be implemented using recursion or a stack data structure. DFS is often used for tasks like checking if a path exists between two nodes or for topological sorting. **Depth-First preserves the shape of the traversal**
+
+      - **Exploration Strategy**: DFS explores a graph by following a single branch as deeply as possible before backtracking. It explores one branch entirely before moving on to the next sibling branch.
+
+      - **Data Structure**: DFS can be implemented using either recursion or a stack data structure. In a recursive DFS, each recursive call explores a node's children.
+
+      - **Use Cases**:
+        - Determining whether a path exists between two nodes.
+        - Topological sorting: Ordering nodes in a directed acyclic graph (DAG) such that for every directed edge (u, v), node u comes before node v in the ordering.
+        - Finding cycles in a graph.
+        - Generating all possible solutions in problems like maze-solving or the N-Queens problem.
+
+      - **Completeness**: DFS may not be complete in all cases, especially if there are cycles in the graph. It can get stuck in an infinite loop if not carefully implemented.
+
+  In summary, BFS explores nodes level by level, making it suitable for tasks like finding the shortest path, while DFS explores one branch deeply before backtracking, making it suitable for tasks like finding paths and detecting cycles. The choice between BFS and DFS depends on the specific problem and the characteristics of the graph being traversed or searched.
 
 - [**Tree Traversal**](https://youtu.be/b_NjndniOqY)
 
-Tree traversal and tree search are two fundamental operations used in working with tree data structures, such as binary trees or graphs. While they both involve exploring the elements within a tree, they serve different purposes and have distinct characteristics:
+  Traversal and search are two fundamental operations used in working with tree data structures, such as binary trees. In case of traversal you traverse the entire tree and for search lookup a specific value.
+
+  **Depth First Search**: DFS is the most common way to traverse trees. There are three ways to traverse a tree using DFS: in-order traversal, pre-order traversal, and post-order traversal. Each of these implementations are DFS and explore down a path fully. The only difference is the order in which they use the current node's data.
 
   **Purpose**: Tree traversal is the process of visiting and examining all nodes in a tree or graph in a systematic way without any specific goal of finding a particular node. The primary objective is to visit every node once.
 
-  **Types**: There are three common types of tree traversal:
+  **Types**: [There are three common types of tree traversal using DFS](https://rb.gy/2j225):
 
   There are three common types of tree traversals: preorder, inorder, and postorder. Each traversal has a different order in which it visits nodes. Let's explore each of them in more detail:
 
@@ -429,41 +468,25 @@ Tree traversal and tree search are two fundamental operations used in working wi
       - For In-Order, print the nodes only when you visit them for the second time.
       - For Post-order, print the nodes when you visit them for the last time.
 
-- **Graph/Tree Search**:
+  **Breadth-First Search**: BFS traverses the tree by level and can also be called [level-order traversal](https://skilled.dev/course/tree-traversal-in-order-pre-order-post-order). So it will go all the way through level 1, then level 2, and follow this path until it reaches the last level. BFS is used to find the shortest path to a node.
 
-  - **Purpose**: Tree search involves finding a specific node or element within a tree or graph, often with a particular goal or criteria in mind. The objective is to locate a target node efficiently. [The algorithms in this class are Depth First Search (DFS), Breadth First Search (BFS), and Dijkstra’s algorithm. If you have additional time, I recommend you learn the A* algorithm as well.](https://levelup.gitconnected.com/must-know-algorithms-for-coding-interviews-937d807064e0#:~:text=The%20algorithms%20in%20this%20class%20are%20Depth%20First%20Search%20(DFS)%2C%20Breadth%20First%20Search%20(BFS)%2C%20and%20Dijkstra%E2%80%99s%20algorithm.%20If%20you%20have%20additional%20time%2C%20I%20recommend%20you%20learn%20the%20A*%20algorithm%20as%20well.)
+  ```plaintext
+          A
+        /   \
+        B     C
+      / \   / \
+      D   E F   G
 
-  - **Types**: Here are two common types of tree search:
+  Level Order Traversal: A, B, C, D, E, F, G
+  ```
 
-    - **Breadth-First Search (BFS)**: BFS starts at the root node and explores all neighbor nodes at the current depth level before moving on to nodes at the next depth level. It's typically used for finding the shortest path or for exploring all possible paths in an unweighted graph.
+- **Tree Traversal, Graph Traversals & Cycles**
 
-      - **Exploration Strategy**: BFS explores a graph by visiting all neighbors of a node before moving on to their children. It explores nodes at the current depth level before proceeding to nodes at the next depth level.
+  In *a tree traversal*, such as DFS or BFS, there is no need to maintain a separate `seen" array` or `visited list`. This is because trees are inherently acyclic structures, meaning there are no cycles or loops within the tree. When traversing a tree, whether using depth-first search (DFS) or breadth-first search (BFS), you naturally move from one node to its children or neighboring nodes. Since there are no cycles in a tree, you will not encounter the same node twice during the traversal. The absence of cycles ensures that you won't get stuck in an infinite loop while traversing a tree. Each node in a tree has a unique path to reach it from the root, so there is no need for additional checks to prevent revisiting nodes.
 
-      - **Data Structure**: BFS uses a queue data structure to keep track of nodes to visit. Nodes are enqueued (added to the back of the queue) when they are discovered and dequeued (removed from the front of the queue) when they are visited.
+  However, in *a general graph traversal* (not limited to trees) where cycles are possible, maintaining a separate data structure like a `seen" array` or `visited list` is necessary to keep track of visited nodes and prevent revisiting them. This helps avoid getting stuck in cycles or infinite loops.
 
-      - **Use Cases**:
-        - Finding the shortest path in an unweighted graph: Since BFS explores nodes level by level, the first time you encounter the target node, you can be sure that it is the shortest path.
-        - Exploring all possible paths from a source node to a target node.
-        - Discovering connected components in an unweighted graph.
-
-      - **Completeness**: BFS is complete, meaning it will find a target node if it exists, provided the graph is connected.
-
-    - **Depth-First Search (DFS)**: DFS explores as far as possible along a branch before backtracking. It can be implemented using recursion or a stack data structure. DFS is often used for tasks like checking if a path exists between two nodes or for topological sorting. **Depth-First preserves the shape of the traversal**
-
-      - **Exploration Strategy**: DFS explores a graph by following a single branch as deeply as possible before backtracking. It explores one branch entirely before moving on to the next sibling branch.
-
-      - **Data Structure**: DFS can be implemented using either recursion or a stack data structure. In a recursive DFS, each recursive call explores a node's children.
-
-      - **Use Cases**:
-        - Determining whether a path exists between two nodes.
-        - Topological sorting: Ordering nodes in a directed acyclic graph (DAG) such that for every directed edge (u, v), node u comes before node v in the ordering.
-        - Finding cycles in a graph.
-        - Generating all possible solutions in problems like maze-solving or the N-Queens problem.
-
-      - **Completeness**: DFS may not be complete in all cases, especially if there are cycles in the graph. It can get stuck in an infinite loop if not carefully implemented.
-
-  In summary, the key conceptual difference between tree traversal and tree search lies in their primary objectives and how they navigate the tree structure. Traversal aims to visit all nodes in a systematic way, while search aims to find a specific node or satisfy a particular condition efficiently. The choice between traversal and search depends on the problem you're trying to solve with the tree or graph data structure. In summary, BFS explores nodes level by level, making it suitable for tasks like finding the shortest path, while DFS explores one branch deeply before backtracking, making it suitable for tasks like finding paths and detecting cycles. The choice between BFS and DFS depends on the specific problem and the characteristics of the graph being traversed or searched.
-
+  [ ]
 ## Binary Tree
 
 - Left Node

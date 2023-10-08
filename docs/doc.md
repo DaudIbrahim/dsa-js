@@ -245,6 +245,12 @@ One key difference that with purely Arrays you essentually define a size aka a c
 
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
 
+### 2D Array
+
+Graphs represented in an Adjacency Matrix are implemented in a 2D Array
+
+- Implementation [Breadth First Search Graph Matrix](../kata-machine/src/day2/BFSGraphMatrix.ts)
+
 ### Linear Data Structures
 
 [Structures can be broken down into two main categories, linear and nonlinear.](https://www.adservio.fr/post/data-structure-types-operations)
@@ -486,7 +492,6 @@ The key conceptual difference between traversal and search lies in their primary
 
   However, in *a general graph traversal* (not limited to trees) where cycles are possible, maintaining a separate data structure like a `seen" array` or `visited list` is necessary to keep track of visited nodes and prevent revisiting them. This helps avoid getting stuck in cycles or infinite loops.
 
-  [ ]
 ## Binary Tree
 
 - Left Node
@@ -541,6 +546,10 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to Memorize the 
 
 - Greedy
 
+- Dijkstra's shortest path, It's actually a family of what is referred to as a greedy algorithm.
+  - [How Dijkstra's Algorithm Works: YT](https://youtu.be/EFg3u_E6eHU)
+  - [dijkstra_list in kata-machine](../kata-machine/src/day2/DijkstraList.ts)
+
 ### Divide and Conquer
 
 Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide & Conquer**
@@ -560,6 +569,8 @@ Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **
 ### Backtracking
 
 - Backtracking
+
+- [This implementation of DFS uses recursion to explore nodes in a depth-first manner, marking them as visited and `backtracking` when necessary.](../kata-machine/src/day2/DFSGraphList.ts)
 
 ## [Patterns for Solving Data Structures and Algorithms Problems](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
 

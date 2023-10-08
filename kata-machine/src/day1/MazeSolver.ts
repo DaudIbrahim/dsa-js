@@ -39,16 +39,16 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
         return true
     }
 
-    /** 3 Recurse Operations */
+    /** 3 Recurse actions */
 
-    // Pre Operation - Doing some operation before recursion
+    // Pre Action - Doing some thing before the recursion call
     seen[y][x] = true
     resultPath.push({ y, x })
 
     for (let i = 0; i < directionArray.length; i++) {
         const cp = { y: curr.y + directionArray[i][0], x: curr.x + directionArray[i][1] }
 
-        // Recursion Operation - The recursion call
+        // Recursion Action - The Recursion call
         const haveFoundTheEnd = walk(maze, wall, cp, end, seen, resultPath)
 
         /**
@@ -63,7 +63,7 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
         }
     }
 
-    // Post - After the recursion call
+    // Post Action - After The recursion call
     resultPath.pop()
 
     return false

@@ -5,7 +5,6 @@ export default function dfs(head: BinaryNode<number>, needle: number): boolean {
     return search(head, needle)
 }
 
-
 const search = (curr: BinaryNode<number> | null, needle: number): boolean => {
     if (curr === null) return false
     if (curr.value === needle) return true

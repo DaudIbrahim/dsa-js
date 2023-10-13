@@ -13,7 +13,7 @@ export default function bfs(graph: WeightedAdjacencyMatrix, source: number, need
     const seen = new Array(graph.length).fill(false);
 
     // use seen, push value & revers in the end for correct order
-    const result: number[] = []
+    const resultPath: number[] = []
 
     do {
         const val = queue.shift()
@@ -21,7 +21,7 @@ export default function bfs(graph: WeightedAdjacencyMatrix, source: number, need
         if (val !== undefined && seen[val] === false) {
 
             if (val === needle) {
-                result.push(val)
+                resultPath.push(val)
                 break
             }
 
@@ -41,25 +41,25 @@ export default function bfs(graph: WeightedAdjacencyMatrix, source: number, need
 
     } while (queue.length);
 
-    if (result.length === 0) {
+    if (resultPath.length === 0) {
         return null
     }
 
     // Generate previous, build it backwards
-    let num = result[0]
+    let num = resultPath[0]
 
     // While it has a previous node
     while (previous[num]) {
         num = previous[num]
-        result.push(num)
+        resultPath.push(num)
     }
 
     // Add the source.
-    // Source does not have a previous val thus it will neither the enter the while loop above nor push to the result
-    result.push(source)
+    // Source does not have a previous val thus it will neither the enter the while loop above nor push to the resultPath
+    resultPath.push(source)
 
-    // Reverse the result is in correct order
-    // With out reverse, result [xyz, source]
-    // With reverse, result [source, xyz]
-    return result.reverse()
+    // Reverse the resultPath is in correct order
+    // With out reverse, resultPath [xyz, source]
+    // With reverse, resultPath [source, xyz]
+    return resultPath.reverse()
 }

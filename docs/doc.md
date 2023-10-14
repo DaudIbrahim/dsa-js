@@ -572,6 +572,8 @@ Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **
 
 - [This implementation of DFS uses recursion to explore nodes in a depth-first manner, marking them as visited and `backtracking` when necessary.](../kata-machine/src/day2/DFSGraphList.ts)
 
+- [Also Dijikisttras]
+
 ## [Patterns for Solving Data Structures and Algorithms Problems](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
 
 ### Pattern 0: Frequency Counter Pattern

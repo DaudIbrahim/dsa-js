@@ -1,68 +1,4 @@
-# Catalogue
-
-## [Algorithms & Data Structures | Learn Algorithms with TypeScript for Interviews | Frontend Masters | ThePrimeagen](https://frontendmasters.com/courses/algorithms/)
-
-- Introduction
-
-- Basics
-
-- Search
-
-  - Linear Search
-
-  - Binary Search
-
-  - Two Crystal Balls Problem
-
-- Sort
-
-  - Bubble Sort
-
-  - Linked List
-
-    - Queue (Linked List)
-
-    - Stack (Linked List)
-
-- Revisit Arrays at the end `dev-daud`
-
-- Recursion
-
-  - Path Finding: MazeSolver
-
-- Quick Sort
-
-  - Quick Sort Algorithm implementation **Divide & Conquer Technique**
-
-- Doubly Linked List
-
-  - Implementation of Doubly Linked List
-
-- Trees
-
-  - Binary Tree Traversal: Pre-Order, In-Order & Post-Order
-
-- Tree Search
-
-  - Breadth First Search
-
-  - Compare Two Binary Trees
-
-  - Binary Search Tree (BST). Discussion of concept/idea, no concrete implementation.
-
-  - Depth First Search On BST
-
-- Heap
-
-  - Implement Heap
-
-  - Implementing Tries
-
-- Graphs
-
-- Maps and LRU
-
-## [The Complete Data Structures and Algorithms Course in Python](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
+# [The Complete Data Structures and Algorithms Course in Python](https://www.udemy.com/course/data-structures-and-algorithms-bootcamp-in-python/)
 
 - Introduction
 
@@ -120,11 +56,11 @@
 
 - AVL Tree
 
-- FIXME: Learn Red Black Trees
+- [ ] - Learn/Implement Red Black Trees
 
 - Binary Heap
 
-- FIXME: Learn [Fibonacci Heap](https://youtu.be/6JxvKfSV9Ns?si=N6F7ex9uDTo1xEcD)
+- [ ] - Learn/Implement [Fibonacci Heap](https://youtu.be/6JxvKfSV9Ns?si=N6F7ex9uDTo1xEcD)
 
 - Trie
 

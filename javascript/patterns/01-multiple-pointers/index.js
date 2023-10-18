@@ -29,8 +29,6 @@ function countUniqueValues(arr = []) {
 function makeSquares(arr) {
     // Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
 
-    // TODO: Look up to a better approach
-
     if (arr.length === 0) return []
 
     const val = []

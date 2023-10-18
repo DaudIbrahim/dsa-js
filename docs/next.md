@@ -16,6 +16,5 @@
   - Fibonacci Heaps
 
 Connecting the dots
-Composing data structures using the existing building blocks
-Interweaving concepts and ideas
+Composing data structures using the existing building blocks. Interweaving concepts and ideas. Example LRU Cache
 Building your Repertoire

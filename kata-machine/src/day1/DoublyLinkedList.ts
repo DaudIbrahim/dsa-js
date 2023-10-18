@@ -41,7 +41,8 @@ export default class DoublyLinkedList<T> {
             curr = curr.next
         }
 
-        // [ ] - TS learn more what is as & difference between as and colon :
+        // TS learn more what is as & difference between as and colon :
+        // By using as, you are telling the TypeScript compiler to trust your knowledge of the type, even if the compiler's type inference might not have determined it correctly. On the other hand, the colon (:) in TypeScript is used for type annotations and is used to explicitly define the type of a variable, parameter, or return value. It is used to declare the expected types and is applicable during variable declarations or function signatures. To summarize, as is used for type assertions when the programmer knows the specific type of the expression, while the colon (:) is used for type annotations to specify the expected types during variable or function declarations.
         return curr as Node<T>
     }
 

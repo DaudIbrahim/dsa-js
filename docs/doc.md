@@ -210,7 +210,9 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
   - Average Case - Big Theta
   - Worst Case - Big O
 
-TODO - Read - [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
+TODO - Read Big-O
+
+- [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
 
 Math
 
@@ -227,7 +229,7 @@ One key difference that with purely Arrays you essentually define a size aka a c
 
 - In array operations `insert` and `write` mean two different things
 
-  - Example An array of size 3 capacity
+  - Example An array of size 3. Lenght of Three `[idx:0, idx:1, idx:2]`
 
     - At index 2 `write` value dummy-value. This is a write opration, writing at index 2
 

@@ -58,7 +58,7 @@ Problem sets are great ways to provide students with the practice necessary to g
 2. Recursive Leap of faith - Towers of Hanoi
 3. Fibonacci Sequenct - Rcursion & Memoization
 
-### Memorize Recursion Concepts
+### Recursion Concepts
 
 1. *Case*
     - Base Case
@@ -70,7 +70,7 @@ Problem sets are great ways to provide students with the practice necessary to g
     - Return Value- rV
     - Argument - A
 
-    **Functions return: Sometimes you overlook this, in recursion we call functions recursively. Memorize the fact that a function always returns, regardless of whether it returns a void or a value. In a recursive manner you build up the stack with function call - you hit a base and the functions start to return, effectively emptying the call stack by popping of each function.**
+    **Functions return: Sometimes you overlook this, in recursion we call functions recursively. useMemorize the fact that a function always returns, regardless of whether it returns a void or a value. In a recursive manner you build up the stack with function call - you hit a base and the functions start to return, effectively emptying the call stack by popping of each function.**
 
 3. *Recursion: Actions*
 
@@ -323,11 +323,13 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 ## Search
 
-### Binary Search
+### [Binary Search](https://www.youtube.com/watch?v=KXJSjte_OAI&pp=ygUMYmlucmF5cyBlYXJj) *Paradigm of Divide & Conquer**
 
-Midpoint - find the midpoint
+- Assumption - *Binary search assumes a sorted input*
+- Midpoint - [find the midpoint](../kata-machine/src//day3//BinarySearchList.ts)
+- Big O - O (Log N)
 
-Index: *Offset by One* | *Memorize*
+Index: *Offset by One* | *useMemorize* | The phrase "offset by one" typically refers to a situation where something is shifted or adjusted by a single unit or increment.
 
 - *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
 

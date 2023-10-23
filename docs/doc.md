@@ -614,6 +614,8 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 
 - offset 🌟
 
+  - In a SinglyLinkedList we make use of offsetNode. (offsetNode - get the prev node to the current in order to update pointers)
+
 - nested loop
 
   - nested loops are to be avoided wherever and as much as possible use two pointers, sliding window, & fast and slow pointers

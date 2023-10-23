@@ -11,11 +11,7 @@ type Node<T> = {
  *
  * push()->HEAD
  *     . .
- *     . .
- *     . .
- *     . .
- *     . .
- * pop()->TAIL
+ * pop()->HEAD
  */
 
 export default class Stack<T> {

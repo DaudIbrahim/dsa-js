@@ -85,6 +85,9 @@ export default class LRU<K, V> {
         return node.value
     }
 
+
+    // Refer - in implementing LRU learnt the importance of writing helper/utility functions.
+
     // lot easier to break up these operations
     private detach(node: Node<V>): void {
 

@@ -210,9 +210,8 @@ The Recursive Leap of Faith is similar to the inductive hypothesis in a proof by
   - Average Case - Big Theta
   - Worst Case - Big O
 
-TODO - Read Big-O
-
-- [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
+- Reaading Material
+  - [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
 
 Math
 
@@ -229,7 +228,7 @@ One key difference that with purely Arrays you essentually define a size aka a c
 
 - In array operations `insert` and `write` mean two different things
 
-  - Example An array of size 3. Lenght of Three `[idx:0, idx:1, idx:2]`
+  - Example An array of size 3. length of Three `[idx:0, idx:1, idx:2]`
 
     - At index 2 `write` value dummy-value. This is a write opration, writing at index 2
 
@@ -295,6 +294,8 @@ However, if the dynamic array needs to be resized due to the change (either beca
 
 In a singly linked list, each node contains a data element and a reference (or link) to the next node in the sequence. Traversal can only be done in one direction, starting from the head and following the next pointers until reaching the tail. It is the simplest and most common type of linked list.
 
+In a SinglyLinkedList we make use of offsetNode. (offsetNode - get the prev node to the current in order to update pointers)s
+
 ### Doubly Linked List
 
 In a doubly linked list, each node has references to both the next node and the previous node in the sequence. This allows for traversal in both forward and backward directions. The additional previous pointers provide more flexibility but require extra memory to store.
@@ -320,6 +321,10 @@ This type of linked list combines the features of a doubly linked list and a cir
 ## Queue
 
 - *Queue - BFS - FIFO - ➡*
+
+## Map/Dictionary
+
+- Map/Dictionary
 
 ## Search
 
@@ -368,7 +373,53 @@ A note on Set Theory
 
           - **The pivotPartition Transforms [5, 1, 10, 3, 7] into [< Pivot <=]**
 
-## [Graph Theory Quintessential](https://youtube.com/playlist?list=PLpXOY-RxVRTPPVLBP6-sz6CMWxhtrI-v_)
+## Binary Tree
+
+- Left Node
+- Right Node
+
+[Example of Binary Tree in Code](../kata-machine/src/__tests__/tree.ts)
+
+## Binary Heap
+
+Super cool data strcture that changes you perspective. [That has to do with the ability to change your perspective.](https://youtu.be/ZQElzjCsl9o?t=324)
+
+[Heap is the data structure best suited to implement Priority Queues.](https://anmolsehgal.medium.com/heap-vs-priority-queues-vs-queues-b03398312c87#:~:text=Heap%20is%20the%20data%20structure%20best%20suited%20to%20implement%20Priority%20Queues.)
+
+[What is a Binary Heap (Concept)](https://youtu.be/AE5I0xACpZs?si=y-Oh_rpBCfk1MT9i)
+
+### Details
+
+The problem that is being solved - create a queue that has an order of priority for its elements
+
+Binary Heaps are implemented as a complete tree ("filling each level from left to right")
+We are not Traversing instead accessing the parent and child by making use of indexes and mathematical formulas (pattern -> formula)
+
+### Traversal
+
+It is not exactly a tree traversal, rather we use mathematical formula to access left and right child; & parent from child
+
+- Left Child
+
+  - 2i + 1
+
+- Right Child
+
+  - 2i + 2
+
+- Parent
+
+  - (i - 1) / 2
+
+### Operation
+
+- Insert: Heapify Up
+
+- Delete: Heapify Down
+
+  - Memorize to compare children nodes before so that you heapify down to the correct node, in case of min heap, heapify down to the smaller node; this ensures that the the node with the samllest value remains at the top
+
+## [Graph Theory Quintessential 🌟](https://youtube.com/playlist?list=PLpXOY-RxVRTPPVLBP6-sz6CMWxhtrI-v_)
 
 - Intro
 - Depth First
@@ -492,55 +543,25 @@ The key conceptual difference between traversal and search lies in their primary
 
 - **Tree Traversal, Graph Traversals & Cycles**
 
-  In *a tree traversal*, such as DFS or BFS, there is no need to maintain a separate `seen" array` or `visited list`. This is because trees are inherently acyclic structures, meaning there are no cycles or loops within the tree. When traversing a tree, whether using depth-first search (DFS) or breadth-first search (BFS), you naturally move from one node to its children or neighboring nodes. Since there are no cycles in a tree, you will not encounter the same node twice during the traversal. The absence of cycles ensures that you won't get stuck in an infinite loop while traversing a tree. Each node in a tree has a unique path to reach it from the root, so there is no need for additional checks to prevent revisiting nodes.
+  In *a tree traversal*, such as DFS or BFS, there is no need to maintain a separate `seen array` or `visited list`. This is because trees are inherently acyclic structures, meaning there are no cycles or loops within the tree. When traversing a tree, whether using depth-first search (DFS) or breadth-first search (BFS), you naturally move from one node to its children or neighboring nodes. Since there are no cycles in a tree, you will not encounter the same node twice during the traversal. The absence of cycles ensures that you won't get stuck in an infinite loop while traversing a tree. Each node in a tree has a unique path to reach it from the root, so there is no need for additional checks to prevent revisiting nodes.
 
-  However, in *a general graph traversal* (not limited to trees) where cycles are possible, maintaining a separate data structure like a `seen" array` or `visited list` is necessary to keep track of visited nodes and prevent revisiting them. This helps avoid getting stuck in cycles or infinite loops.
+  However, in *a general graph traversal* (not limited to trees) where cycles are possible, maintaining a separate data structure like a `seen array` or `visited list` is necessary to keep track of visited nodes and prevent revisiting them. This helps avoid getting stuck in cycles or infinite loops.
 
-## Binary Tree
+  Examples of make use of a `seen array` or `visited list` in Graph
 
-- Left Node
-- Right Node
+  - [BFSGraphMatrix](../kata-machine/src/day2/BFSGraphMatrix.ts)
+  - [DFSGraphList](../kata-machine/src/day2/DFSGraphList.ts)
+  - [DijkstraList.ts](../kata-machine/src/day2/DijkstraList.ts.ts)
 
-[Example of Binary Tree in Code](../kata-machine/src/__tests__/tree.ts)
+## Dijkstra's Algorithm
 
-## Binary Heap
+Okay, so let's talk about Dijkstra's shortest path. It's actually a family of what is referred to as a greedy algorithm.
 
-Super cool data strcture that changes you perspective. [That has to do with the ability to change your perspective.](https://youtu.be/ZQElzjCsl9o?t=324)
+## Composing Data Structures
 
-[Heap is the data structure best suited to implement Priority Queues.](https://anmolsehgal.medium.com/heap-vs-priority-queues-vs-queues-b03398312c87#:~:text=Heap%20is%20the%20data%20structure%20best%20suited%20to%20implement%20Priority%20Queues.)
+### LRU
 
-[What is a Binary Heap (Concept)](https://youtu.be/AE5I0xACpZs?si=y-Oh_rpBCfk1MT9i)
-
-### Details
-
-The problem that is being solved - create a queue that has an order of priority for its elements
-
-Binary Heaps are implemented as a complete tree ("filling each level from left to right")
-We are not Traversing instead accessing the parent and child by making use of indexes and mathematical formulas (pattern -> formula)
-
-### Traversal
-
-It is not exactly a tree traversal, rather we use mathematical formula to access left and right child; & parent from child
-
-- Left Child
-
-  - 2i + 1
-
-- Right Child
-
-  - 2i + 2
-
-- Parent
-
-  - (i - 1) / 2
-
-### Operation
-
-- Insert: Heapify Up
-
-- Delete: Heapify Down
-
-  - Memorize to compare children nodes before so that you heapify down to the correct node, in case of min heap, heapify down to the smaller node; this ensures that the the node with the samllest value remains at the top
+- LRU
 
 ## [Greedy, Divide/Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
 
@@ -556,11 +577,14 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to Memorize the 
 
 ### Divide and Conquer
 
-Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide & Conquer**
+#### Divide and Conquer Technique
 
-- Divide & Conquer
-- Split in half
-- Go: Left || Right
+- Partition by Splitting in half
+- Pivot Go: Left || Right
+
+#### Algorithms that use this approach
+
+Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide & Conquer**
 
 - Binary Searh
 - Quick Sort
@@ -576,9 +600,11 @@ Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **
 
 - [This implementation of DFS uses recursion to explore nodes in a depth-first manner, marking them as visited and `backtracking` when necessary.](../kata-machine/src/day2/DFSGraphList.ts)
 
-- [Also Dijikisttras]
+- Also Dijikisttras makes use of this technique
 
 ## [Patterns for Solving Data Structures and Algorithms Problems](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
+
+- [NeetCode RoadMap](https://neetcode.io/roadmap?utm_source=linkedin)
 
 ### Pattern 0: Frequency Counter Pattern
 

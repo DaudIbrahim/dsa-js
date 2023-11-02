@@ -1,12 +1,12 @@
 export default function bs_list(haystack: number[], needle: number): boolean {
 
-    // memorize - [idx: 0, idx: 1, idx: 2] lenght: 3
+    // memorize - [idx: 0, idx: 1, idx: 2] length: 3
     // memorize - the highPointer is Offset by One essentailly highExclusive
 
     let lowInclusive = 0
     let highExclusive = haystack.length
 
-    // on a piece of paper work on the algorithm and you will eventually figure out why high is exclusive. Work ofr the meal
+    // on a piece of paper work on the algorithm and you will eventually figure out why high is exclusive. Work for the meal
     // exit loop when the two pointers low and high meet.
     while (lowInclusive < highExclusive) {
         const midPoint = getMidPointWithLowInclusiveAndHighExclusive(lowInclusive, highExclusive)
@@ -27,7 +27,7 @@ export default function bs_list(haystack: number[], needle: number): boolean {
 /**
  * To find the mid in a list this is the approach I have decided to go with - thePrimeagen's mid method
  * ThePrimeagen's mid method, easy to remember about offsets
- * Offset by one, where highest is exclusive and midpoint uses low as an offset as well
+ * High is exclusive | Offset by one - this midpoint implementation uses low as an offset
  * Additionally: AWS for pagination includes offet, MySQL in its query for pagination makes use of OFFSET
  */
 const getMidPointWithLowInclusiveAndHighExclusive = (lowInclusive: number, highExclusive: number): number => {

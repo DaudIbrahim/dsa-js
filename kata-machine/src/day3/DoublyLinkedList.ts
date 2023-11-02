@@ -39,7 +39,7 @@ export default class DoublyLinkedList<T> {
         return this._isEmpty() === true ? false : (this.head === this.tail)
     }
 
-    // [ ] - great example of inclusive & exclusive
+    // great example of inclusive & exclusive
     private _isValidRangeOfIndex(idx: number) {
         return (idx >= 0 && idx < this.length)
     }
@@ -202,7 +202,7 @@ export default class DoublyLinkedList<T> {
         }
 
         // itertate
-        // note in here we are excluding the head and tail from the search. looping inclusive (head, tail)
+        // note in here we are excluding the head and tail from the search. looping exclusive (head, tail)
         let node = (this.head && this.head.next)
 
         while (node?.next) {

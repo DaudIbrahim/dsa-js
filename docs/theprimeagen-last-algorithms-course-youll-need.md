@@ -4,21 +4,21 @@
 
 - Arrays
 
-  - Linear Search
+  - Linear Search ✔
 
-  - Binary Search
+  - Binary Search ✔
 
   - Two Crystal Balls
 
 - Lists
 
-  - Singly
+  - Singly ✔
 
-  - Doubly
+  - Doubly ✔
 
-  - Queue
+  - Queue ✔
 
-  - Stack
+  - Stack ✔
 
   - ArrayList
 
@@ -51,3 +51,15 @@
 - Map
 
 - LRU
+
+## TODO: ThePrimeagen V2 Problem Sets
+
+- Remember to check all of the boxes above
+
+  - ArrayList
+
+  - RingBuffer
+
+  - two_crystal_balls
+
+  - prims

@@ -89,7 +89,6 @@ export default class SinglyLinkedList<T> {
             return
         }
 
-        // BUG Missed use case: have single node, head and tail pointing to same node
         if (this.head === this.tail) {
             const node = this._createNode(item)
             this.head.next = node
@@ -174,7 +173,6 @@ export default class SinglyLinkedList<T> {
         if (offsetNode.next === this.tail) {
             const node = this.tail
             this.tail = offsetNode
-            // BUG - For the tail did not set next to undefined
             this.tail.next = undefined
             this.length--
             return node?.value
@@ -209,7 +207,6 @@ export default class SinglyLinkedList<T> {
                 break
             }
 
-            // BUG Missed did not set base case for while loop
             offsetNode = offsetNode.next
         }
 

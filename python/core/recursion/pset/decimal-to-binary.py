@@ -1,4 +1,3 @@
-# TODO - Check Solution of decimal-to-binary (Later)
 # Convert a number from Decimal to Binary
 # https://www.rapidtables.com/convert/number/decimal-to-binary.html
 

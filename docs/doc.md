@@ -328,7 +328,7 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 ## Search
 
-### [Binary Search](https://www.youtube.com/watch?v=KXJSjte_OAI&pp=ygUMYmlucmF5cyBlYXJj) *Paradigm of Divide & Conquer**
+### [Binary Search](https://www.youtube.com/watch?v=KXJSjte_OAI&pp=ygUMYmlucmF5cyBlYXJj) *Paradigm of Divide and Conquer**
 
 - Assumption - *Binary search assumes a sorted input*
 - Midpoint - [find the midpoint](../kata-machine/src//day3//BinarySearchList.ts)
@@ -336,7 +336,7 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 Index: *Offset by One* | *useMemorize* | The phrase "offset by one" typically refers to a situation where something is shifted or adjusted by a single unit or increment.
 
-- *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, hight) range(0, 5)*
+- *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, high) range[0, 5)*
 
 A note on Set Theory
 
@@ -352,18 +352,18 @@ A note on Set Theory
 
     ```py
     for i in range(0, 5):
-      print(i) # 0, 1, 2, 3, 4, 5
+      print(i) # 0, 1, 2, 3, 4
     ```
 
 ## Sort
 
-### Quick Sort
+### Quick Sort (< Pivot <=)
 
-- Divide & Conquer
+- Divide and Conquer
 
   - Partition the array into two parts, partition one to the left and other to the right
 
-    - There are more than one ways to pivotPartition
+    - Pivot Partition Key. Select an index/value to do the partition. There are more than one ways to pivotPartition. I have used the approach of using the last index as the pivot point aka... memory hook: Partition Key. (Similar to the idea of partition key in system design database sharding)
 
       - I am using the approach from [VisuAlgo NUS](https://visualgo.net/en/sorting)
 
@@ -371,7 +371,7 @@ A note on Set Theory
 
           - **< Pivot <=**
 
-          - **The pivotPartition Transforms [5, 1, 10, 3, 7] into [< Pivot <=]**
+          - **The pivotPartition Transforms [7, 1, 10, 3, 5] into [< Pivot <=]**
 
 ## Binary Tree
 
@@ -563,13 +563,18 @@ Okay, so let's talk about Dijkstra's shortest path. It's actually a family of wh
 
 - LRU
 
-## [Greedy, Divide/Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
+## [Greedy, Divide and Conquer, Dynamic & Backtracking](https://www.youtube.com/playlist?list=PLxvbXPxg6ydxQen2-cPMyzKco1Q89JvPi)
 
 Silly memory hook: Greatly Designed Data Base - (GDDB) in order to Memorize the following four techniques:
 
 ### Greedy
 
-- Greedy
+The Greedy Approach
+
+#### Algorithms that use The Greedy Approach
+
+- Linear Search
+  - Now, we need to just do the Undo function, which involves merging, hence the name, Merge Sort. All right, there are a bunch of different algorithm strategies. I didn't technically really name any of the algorithm strategies as we go, there's greedy. So linear search is a greedy search. We go until we find the first one, we're done.[(Src: theprimeagen-quicksort-algorithm-frontendmasters)](https://frontendmasters.com/courses/algorithms/quicksort-algorithm/)
 
 - Dijkstra's shortest path, It's actually a family of what is referred to as a greedy algorithm.
   - [How Dijkstra's Algorithm Works: YT](https://youtu.be/EFg3u_E6eHU)
@@ -577,30 +582,61 @@ Silly memory hook: Greatly Designed Data Base - (GDDB) in order to Memorize the 
 
 ### Divide and Conquer
 
-#### Divide and Conquer Technique
-
-- Partition by Splitting in half
+- Partition by Splitting (Splitting in half for example)
 - Pivot Go: Left || Right
 
-#### Algorithms that use this approach
+#### Algorithms that use The Divide and Conquer Approach
 
-Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide & Conquer**
+Binary Search, Quick Sort, & Binary Search Tree, share an identical Paradigm. **The Paradigm of Divide and Conquer**
 
 - Binary Searh
 - Quick Sort
 - Binary Tree
 
-### Dynamic
+### Dynamic Programming
 
-- Dynamic
+*Essence* - `Dynamic programming is about finding solution to problems in recursive manner and then removing the overhead of recursion by various ways for example - Memoization, Bottom-up approach, Finding patterns, Deriving explicit formulas or equations.`
+
+#### [What is Dynamic Programming and how is it done](https://youtu.be/BCO8JKA2_N8)
+
+Steps
+
+1. **Find The Recursive Solution**: Dynamic Programming often starts with defining a problem in a recursive way, where the solution depends on the solutions to smaller instances of the same problem.
+
+2. **Try to find if there is a lot of repetitive states in it**: Dynamic Programming focuses on recognizing when the same subproblems are being solved multiple times. This is a key insight in many DP problems.
+
+3. **Store them in Matrix**: Instead of recomputing the solutions for those repetitive subproblems, Dynamic Programming stores the results in a data structure like a matrix or table. This is known as memoization.
+
+4. **Don't need to recompute the same thing again and again**: By storing the results of subproblems, Dynamic Programming avoids redundant calculations.
+
+5. **Just store it, and that's what Dynamic programming is!! Simply put!!!**: This step nicely summarizes the essence of Dynamic Programming. It's about storing and reusing solutions to subproblems to optimize the overall problem-solving process.
+
+Probelm Set
+
+- Starting with easy DP problem - Longest common Sub Sequence / Sub String.
+- Complex Problem - Bellman Ford
 
 ### Backtracking
 
-- Backtracking
+Backtracking is a problem-solving technique that's like playing a game of "guess and check" to find a solution.
 
-- [This implementation of DFS uses recursion to explore nodes in a depth-first manner, marking them as visited and `backtracking` when necessary.](../kata-machine/src/day2/DFSGraphList.ts)
+Imagine you have a big maze on a piece of paper, and you want to find your way from the start to the finish. You start by taking a step and see if it leads you closer to the finish. If it does, you keep going in that direction. But if you reach a dead-end or get stuck, you backtrack, which means you go back to where you made a different choice and try a different path. You keep doing this until you find a way to the finish.
 
-- Also Dijikisttras makes use of this technique
+Backtracking is like exploring different paths, trying things out, and if they don't work, going back to where you made a different choice and trying a new path. It's a technique used for solving problems where you have to explore many possibilities to find the best solution. Some common problems that can be solved with backtracking include:
+
+1. **Mazes**: Finding a way out of a maze, like the one on your paper.
+
+2. **N-Queens Puzzle**: Placing N chess queens on an N×N chessboard so that no two queens threaten each other.
+
+3. **Sudoku**: Filling in a Sudoku puzzle with the right numbers while following certain rules.
+
+4. **Permutations and Combinations**: Finding all possible orders or selections of a set of items.
+
+5. **Traveling Salesman Problem**: Finding the shortest route that visits a set of cities and returns to the starting city.
+
+6. **Cryptarithmetic Puzzles**: Solving puzzles where letters represent numbers in mathematical equations.
+
+Backtracking is a way to be systematic and explore different options until you find the best one. It's like a game of trial and error where you learn from your mistakes and keep going until you find the answer. Backtracking is a general technique used for systematically exploring possibilities and is often employed in `solving combinatorial problems`.
 
 ## [Patterns for Solving Data Structures and Algorithms Problems](https://github.com/Chanda-Abdul/Several-Coding-Patterns-for-Solving-Data-Structures-and-Algorithms-Problems-during-Interviews)
 
@@ -628,6 +664,8 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 
 - Memorize
 
+- Lessons Learnt
+
 ### Refer (Previously learned ideas & concepts)
 
 - Start by fiding a solution for the smallest problem
@@ -645,3 +683,11 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 - nested loop
 
   - nested loops are to be avoided wherever and as much as possible use two pointers, sliding window, & fast and slow pointers
+
+- database sharding
+
+  1. Split Data - find a way to split your data into independant buckets
+
+  2. Select a sharding key - based on your sharding key the load distribution will take place on the server
+
+  3. Mapping Method - Mapping key to real servers

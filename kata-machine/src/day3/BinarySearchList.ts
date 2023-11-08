@@ -1,23 +1,33 @@
+/**
+ * The Paradigm of Divide and Conquer
+ * Multiple Pointers
+ *
+ * Approach: Exclusive High Index
+ * *Establish the mental model of having your index off by 1's | inclusive/exclusive [low, high) range[0, 5)*
+ *
+ * ```py
+ *  for i in range(0, 5):
+ *      print(i) # 0, 1, 2, 3, 4
+ * ```
+ *
+ * The benefit of exclusive high index in our approach is the Base Case
+ * We hit the Base Case aka exit out of the loop as soon as
+ * both pointers low and high meet at the same index we hit the Base Case and return
+ */
 export default function bs_list(haystack: number[], needle: number): boolean {
+    let lowIdx = 0
+    let highIdx = haystack.length
+    let midIdx = getMidIndex(lowIdx, highIdx)
 
-    // memorize - [idx: 0, idx: 1, idx: 2] length: 3
-    // memorize - the highPointer is Offset by One essentailly highExclusive
-
-    let lowInclusive = 0
-    let highExclusive = haystack.length
-
-    // on a piece of paper work on the algorithm and you will eventually figure out why high is exclusive. Work for the meal
-    // exit loop when the two pointers low and high meet.
-    while (lowInclusive < highExclusive) {
-        const midPoint = getMidPointWithLowInclusiveAndHighExclusive(lowInclusive, highExclusive)
-        const currentValueFound = haystack[midPoint]
-
-        if (currentValueFound === needle) {
+    while (lowIdx < highIdx) {
+        if (needle === haystack[midIdx]) {
             return true
-        } else if (currentValueFound > needle) {
-            highExclusive = midPoint
+        } else if (needle > haystack[midIdx]) {
+            lowIdx = midIdx + 1
+            midIdx = getMidIndex(lowIdx, highIdx)
         } else {
-            lowInclusive = midPoint + 1
+            highIdx = midIdx
+            midIdx = getMidIndex(lowIdx, highIdx)
         }
     }
 
@@ -25,18 +35,12 @@ export default function bs_list(haystack: number[], needle: number): boolean {
 }
 
 /**
- * To find the mid in a list this is the approach I have decided to go with - thePrimeagen's mid method
- * ThePrimeagen's mid method, easy to remember about offsets
- * High is exclusive | Offset by one - this midpoint implementation uses low as an offset
- * Additionally: AWS for pagination includes offet, MySQL in its query for pagination makes use of OFFSET
+ * Refer - in implementing LRU learnt the importance of writing helper/utility functions. Helps with abstraction & encapsulation
+ * Using ThePrimeagen's mid method, easy to remember about offsets
+ * Just in case you forgot I calculated and found for both odd and even - inclusive and exclusive end indexes return the correct result
  */
-const getMidPointWithLowInclusiveAndHighExclusive = (lowInclusive: number, highExclusive: number): number => {
-    const response = lowInclusive + ((highExclusive - lowInclusive) / 2)
-    return Math.floor(response)
+const getMidIndex = (startIdx: number, endIdx: number) => {
+    return Math.floor(
+        startIdx + ((endIdx - startIdx) / 2)
+    )
 }
-
-// There are only two hard things in Computer Science: cache invalidation and naming things.
-// https://martinfowler.com/bliki/TwoHardThings.html
-
-// The audience wants to work for their meal. They just don’t want to know they’re doing that. Meaning, we want to be given the clues to understand the whole story. We want to be told, what is 2 + 2? But we don't want to be told, 2 + 2 = 4. It’s this well organized absence of information that draws us in. make the audience put things together. (Story Telling)
-// https://www.youtube.com/watch?v=KxDwieKpawg&lc=UgwLgI__ZnJ7lLZC8Al4AaABAg

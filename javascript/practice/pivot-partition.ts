@@ -1,56 +1,55 @@
+/**
+ * My Approach
+ * 12-Nov-23 3:50:51 AM
+ */
 const pivotPartition = (arr: number[], startIdx: number = 0, endIdx: number = arr.length - 1): number => {
-    const pivotIdx = endIdx
+    let pivotIdx = startIdx
     const pivotElement = arr[pivotIdx]
 
-    let windowStartIdx: number = -1
-    let windowSize = 0
 
     // < pivot <=
+    let lessThanIdx: null | number = null
+    let greaterThanOrEqualsIdx: null | number = null
 
-    // bug
-    for (let i = startIdx; i <= endIdx; i++) {
+    for (let index = startIdx + 1; index < arr.length; index++) {
+        const element = arr[index];
 
-        const element = arr[i];
+        if ((pivotElement < element) === false) {
+            lessThanIdx = index
 
-        if (element < pivotElement) {
+            // do the swapping. swap element and point index to their correct position
+            if (greaterThanOrEqualsIdx) {
+                const temp = arr[greaterThanOrEqualsIdx]
+                arr[greaterThanOrEqualsIdx] = arr[lessThanIdx]
+                arr[lessThanIdx] = temp
 
-            if (windowStartIdx >= 0) {
-
-                const temp = arr[windowStartIdx]
-                arr[windowStartIdx] = element
-                arr[i] = temp
-                windowStartIdx += 1
+                const tempIdx = greaterThanOrEqualsIdx
+                greaterThanOrEqualsIdx = lessThanIdx
+                lessThanIdx = tempIdx
             }
 
         } else {
-
-            // (element >= pivotElement)
-
-            // bug - zero index - if fails
-            if (windowStartIdx >= 0) {
-                windowSize += 1
-            } else {
-
-                windowStartIdx = i
-            }
+            greaterThanOrEqualsIdx = index
         }
 
     }
 
-    // final swap
-    // bug - zero index - if fails
-    if (windowStartIdx >= 0) {
-        const temp = arr[windowStartIdx]
-        arr[windowStartIdx] = arr[pivotIdx]
+    // Final Swap
+    if (lessThanIdx !== null) {
+        const temp = arr[lessThanIdx]
+        arr[lessThanIdx] = arr[pivotIdx]
         arr[pivotIdx] = temp
 
-        return windowStartIdx
-    }
+        const tempIdx = lessThanIdx
+        pivotIdx = lessThanIdx
+        lessThanIdx = tempIdx
 
-    return pivotIdx
+        return lessThanIdx
+    } else {
+        return pivotIdx
+    }
 }
 
-// const arr = [2, 15, 13, 4, 7, 68, 1]
-const arr = [2, 1]
-pivotPartition(arr)
-console.log(arr)
+const myArray = [5, 0, 1, 7, 2, 13]
+pivotPartition(myArray)
+console.log(myArray)

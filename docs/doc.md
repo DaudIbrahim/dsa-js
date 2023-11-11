@@ -18,15 +18,30 @@ Problem Set
 
 ### Problem Solving `Goal`
 
-[The Focus Time](https://www.youtube.com/watch?v=zvrleanEYOw&t=37s "Grant Sanderson") that you are spending should be on solving specific problems. Try to push yourself to solve more problems than you naturally would.
+**[The Focus Time](https://www.youtube.com/watch?v=zvrleanEYOw&t=37s "Grant Sanderson") that you are spending should be on solving specific problems.**
 
-### Learning Problems `Approach`
+**Try to push yourself to solve more problems than you naturally would.**
 
-It is more important to be able to [recognize a problem](https://qr.ae/priZWZ "John Byrd"), than to Memorize an algorithm that solves it.
+It is more important to be able to Recognize a problem, than to Memorize an algorithm that solves it. - [John Byrd](https://qr.ae/priZWZ)
 
-- Learn/Recogize Problems
-- Identify Patterns
-- Create Solutions
+- *Recogize-Learn* `Problems`
+- *Identify* `Patterns`
+- *Create* `Solutions`
+
+#### [My approach to practice: problem solving](https://youtu.be/xF554Tlzo-c?t=309)
+
+Spend [60 minutes](https://youtu.be/oUJlLAdQGIk?&t=77) of focus time on solving a problem
+
+- You solved it - `Great`
+
+  - You did'nt
+
+    1. Spend the rest of you time learning the solution
+    2. Re-Implement the Solution from scratch by yourself **Do It!**
+
+```js
+// 12-Nov-23 2:54:56 AM
+```
 
 ## Strcuture & Elements & Operations
 

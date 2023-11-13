@@ -18,6 +18,10 @@ const pivotPartition = (arr: number[], startIdx: number, endIdx: number): number
      * You made a mistake here for not accounting for offset in countIdx
      *
      * Refer `offset` : the countIdx must include the offset
+     * 
+     * window approach
+     * window of less than elements < pivot 
+     * https://visualgo.net/en/sorting
      */
     let countIdx = startIdx
 

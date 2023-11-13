@@ -53,7 +53,7 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
 
         /**
          * Memorize
-         * Break out of for Recursion 🚩 when I have found true
+         * Break out of Recursion 🚩 when I have found true
          * you cannot just keep on recursion once you found the end
          */
         if (haveFoundTheEnd) {

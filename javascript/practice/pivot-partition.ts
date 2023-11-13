@@ -6,7 +6,6 @@ const pivotPartition = (arr: number[], startIdx: number = 0, endIdx: number = ar
     let pivotIdx = startIdx
     const pivotElement = arr[pivotIdx]
 
-
     // < pivot <=
     let lessThanIdx: null | number = null
     let greaterThanOrEqualsIdx: null | number = null

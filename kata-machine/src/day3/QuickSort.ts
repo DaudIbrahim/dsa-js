@@ -24,6 +24,10 @@ const quick_sort_recursive = (arr: number[], startIdx: number, endIdx: number) =
     quick_sort_recursive(arr, (pivotIdx + 1), endIdx)
 }
 
+/**
+ * Pointer Approach
+ * https://youtu.be/WprjBK0p6rw?si=7d9XFGm7wUy9sTKe
+ */
 const pivot_partition_lomuto = (arr: number[], startIdx: number, endIdx: number): number => {
     let pivotIdx = startIdx
     const pivotElement = arr[pivotIdx]

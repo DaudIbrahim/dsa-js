@@ -85,7 +85,7 @@ Problem sets are great ways to provide students with the practice necessary to g
     - Return Value- rV
     - Argument - A
 
-    **Functions return: Sometimes you overlook this, in recursion we call functions recursively. useMemorize the fact that a function always returns, regardless of whether it returns a void or a value. In a recursive manner you build up the stack with function call - you hit a base and the functions start to return, effectively emptying the call stack by popping of each function.**
+    **Functions return: Sometimes you overlook this, in recursion we call functions recursively. Keep in mind the fact that a function always returns, regardless of whether it returns a void or a value. In a recursive manner you build up the stack with function call - you hit a base and the functions start to return, effectively emptying the call stack by popping of each function.**
 
 3. *Recursion: Actions*
 
@@ -261,6 +261,10 @@ One key difference that with purely Arrays you essentually define a size aka a c
 
 Arrays are not a built-in data structure, and therefore need to be imported via the array module in order to be used.
 
+### Dynamic Arrays
+
+[What if you had to invent a dynamic array?](https://youtu.be/5AllG-i_yto)
+
 ### 2D Array
 
 Graphs represented in an Adjacency Matrix are implemented in a 2D Array
@@ -345,7 +349,7 @@ This type of linked list combines the features of a doubly linked list and a cir
 
 ### [Binary Search](https://www.youtube.com/watch?v=KXJSjte_OAI&pp=ygUMYmlucmF5cyBlYXJj) *Paradigm of Divide and Conquer**
 
-- Assumption - *Binary search assumes a sorted input*
+- [Binary search can only be implemented on sorted data.](https://shorturl.at/dwNQZ)
 - Midpoint - [find the midpoint](../kata-machine/src//day3//BinarySearchList.ts)
 - Big O - O (Log N)
 

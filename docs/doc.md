@@ -695,9 +695,15 @@ In many problems dealing with an array (or a LinkedList), we are asked to find o
 
 - middle-element
 
-- offset 🌟
+  - [getMidIndex](../kata-machine/src/day3/BinarySearchList.ts)
 
+- `OFFSET 🌟`
+
+  - Binary Search approach *offset* exclusive high index. Crossing point of both pointers low and high becomses base case.
   - In a SinglyLinkedList we make use of offsetNode. (offsetNode - get the prev node to the current in order to update pointers)
+  - MySQL Query for pagination makes use of *OFFSET*
+  - AWS for pagination makes use of *offset*
+  - Time zone UTC *offsets*
 
 - nested loop
 

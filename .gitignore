@@ -160,5 +160,4 @@ coverage
 *.sw?
 
 # Folder Ignore
-.folderignore
-.ignore
+dot-ignore

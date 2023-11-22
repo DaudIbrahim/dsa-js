@@ -313,19 +313,27 @@ However, if the dynamic array needs to be resized due to the change (either beca
 
 In a singly linked list, each node contains a data element and a reference (or link) to the next node in the sequence. Traversal can only be done in one direction, starting from the head and following the next pointers until reaching the tail. It is the simplest and most common type of linked list.
 
-In a SinglyLinkedList we make use of offsetNode. (offsetNode - get the prev node to the current in order to update pointers)s
+In a SinglyLinkedList we make use of offsetNode. (offsetNode - get the prev node to the current in order to update pointers). In comparison to doubly linked list we do not have pointers that point to previous node. Therefore for common operations such as delete node at index 4 you would need the offset node at index 3 and then update pointers acordingly.
 
 ### Doubly Linked List
 
 In a doubly linked list, each node has references to both the next node and the previous node in the sequence. This allows for traversal in both forward and backward directions. The additional previous pointers provide more flexibility but require extra memory to store.
 
-### Circular Linked List
+### Cyclic aka Circluar Linked List
+
+Important to note when we say Circular then we are essentially reffering to the concept of `Cyclic!`
+
+In this scenario nodes do not point to null in their terminating pointers instead they point back at the Linked List structure itself.
+
+Nodes form a cycle rather than terminating with null pointers.
+
+#### Singly Circular Linked List
 
 A circular singly linked list is a linked list where the last node points back to the first node, forming a closed loop.
 
 In a circular linked list, the tail node's next reference points back to the head, forming a loop. This means there is no end or null reference, and the list can be traversed indefinitely. Circular linked lists are useful in scenarios where cyclic behavior or continuous looping is required.
 
-### Doubly Circular Linked List
+#### Doubly Circular Linked List
 
 This type of linked list combines the features of a doubly linked list and a circular linked list. Each node has references to both the next and previous nodes, and the tail node's next reference points back to the head. This creates a circular loop that can be traversed in both directions.
 
@@ -392,7 +400,9 @@ A note on Set Theory
 
           - **The pivotPartition Transforms [7, 1, 10, 3, 5] into [< Pivot <=]**
 
-## Binary Tree
+## Binary Search Tree
+
+BST's key characteristic is that for each node, all nodes in its left subtree have values less than the node's value, and all nodes in its right subtree have values greater than the node's value.
 
 - Left Node
 - Right Node

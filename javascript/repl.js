@@ -1,64 +1,16 @@
-/**
- * 21-Oct-23 3:03:58 PM
- *
- * - Bubble Sort
- * - Linked List Singly
- * - Stack
- * - Queue
- * - Linked List Doubly
- *
- *
- *
- */
+// [ ] - Continue
+const bst = new BinarySearchTree()
 
+// insert
+bst.insert(15, 'A')
+bst.insert(6, 'Y')
+bst.insert(18, 'Q')
+bst.insert(17, 'W')
+bst.insert(20, 'E')
 
+// walk
+console.log(bst.walk())
 
-const arr = ['A', 'B', 'C']
-
-let i = 0
-let j = 0
-let k = 0
-
-/**
- * 1. check condition for i truthy/false
- * 2. run the body of the loop
- * 3. increment i
- */
-for (; i < arr.length; i++) {
-    console.log(arr[i])
-}
-
-for (; j < 0; j++) {
-    console.log(arr[j])
-}
-
-for (; k <= 0; k++) {
-    console.log(arr[k])
-}
-
-console.log(
-    `i = ${i}`,
-    `j = ${j}`,
-    `k = ${k}`,
-)
-
-
-/**
- * While
- */
-let anIndex = 0
-
-while (anIndex > 1) {
-    anIndex += 1
-}
-
-console.log(
-    anIndex
-)
-
-/**
- * Linked List
- * 
- * Patterns - fast and slow pointers, that one video on how to solve lnked list problems outlines 3 problems,
- * neetcode has an excelent explaination of fast and slow pointers
- */
+console.log(bst.getSuccessor(13))
+console.log(bst.getSuccessor(17))
+console.log(bst.getSuccessor(20))

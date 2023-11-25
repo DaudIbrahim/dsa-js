@@ -1,164 +1,93 @@
-import BinaryTree from '../src/binarySearchTree'
+import BinarySearchTree from '../src/binarySearchTree'
 
 describe('Binary Search Tree', () => {
-    it('should insert elements and maintain BST property', () => {
-        const bst = new BinaryTree<number>();
+  let bst;
 
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
+  beforeEach(() => {
+    bst = new BinarySearchTree<string>();
+  });
 
-        // After insertion, the tree should look like:
-        //        10
-        //       /  \
-        //      5    15
-        //     / \  /  \
-        //    3  8 12  18
+  it('should insert elements and maintain BST property', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
 
-        expect(bst.traverseInorder()).toEqual([3, 5, 8, 10, 12, 15, 18]);
-    });
+    // After insertion, the tree should look like:
+    //        10
+    //       /  \
+    //      5    15
+    //     / \  /  \
+    //    3  8 12  18
 
-    it('should delete elements and maintain BST property (case 1: leaf node)', () => {
-        const bst = new BinaryTree<number>();
+    expect(bst.walk()).toEqual([3, 5, 8, 10, 12, 15, 18]);
+  });
 
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
+  it('should search for elements', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
 
-        bst.delete(18);
+    expect(bst.search(10)).toEqual([10, 'A']);
+    expect(bst.search(5)).toEqual([5, 'B']);
+    expect(bst.search(15)).toEqual([15, 'C']);
+    expect(bst.search(7)).toBeNull(); // Element not present in the tree
+  });
 
-        // After deletion of 18 (leaf node), the tree should look like:
-        //        10
-        //       /  \
-        //      5    15
-        //     / \  /
-        //    3  8 12
+  it('should find maximum and minimum values', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
 
-        expect(bst.traverseInorder()).toEqual([3, 5, 8, 10, 12, 15]);
-    });
+    expect(bst.getMax()).toEqual([18, 'G']);
+    expect(bst.getMin()).toEqual([3, 'D']);
+  });
 
-    it('should delete elements and maintain BST property (case 2: node with one child)', () => {
-        const bst = new BinaryTree<number>();
+  it('should check if the tree is empty', () => {
+    const emptyBst = new BinarySearchTree<string>();
+    const nonEmptyBst = new BinarySearchTree<string>();
+    nonEmptyBst.insert(10, 'A');
 
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
+    expect(emptyBst.isEmpty()).toBe(true);
+    expect(nonEmptyBst.isEmpty()).toBe(false);
+  });
 
-        bst.delete(15);
+  it('should get the successor of a node', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
 
-        // After deletion of 15 (node with one child), the tree should look like:
-        //        10
-        //       /  \
-        //      5    18
-        //     / \
-        //    3  8
-        //       \
-        //       12
+    expect(bst.getSuccessor(10)).toEqual([12, 'F']);
+    expect(bst.getSuccessor(5)).toEqual([8, 'E']);
+    expect(bst.getSuccessor(15)).toEqual([18, 'G']);
+    expect(bst.getSuccessor(18)).toBeNull(); // No successor for the maximum node
+  });
 
-        expect(bst.traverseInorder()).toEqual([3, 5, 8, 10, 12, 18]);
-    });
+  it('successor of a node 3 cases', () => {
+    bst.insert(15, 'A')
 
-    it('should delete elements and maintain BST property (case 3: node with two children)', () => {
-        const bst = new BinaryTree<number>();
+    bst.insert(6, 'Y')
+    bst.insert(7, 'B')
+    bst.insert(13, 'C')
 
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
+    bst.insert(18, 'Q')
+    bst.insert(17, 'W')
+    bst.insert(20, 'E')
 
-        bst.delete(10);
+    expect(bst.getSuccessor(13)).toEqual([15, 'A'])
+    expect(bst.getSuccessor(17)).toEqual([18, 'Q'])
+    expect(bst.getSuccessor(20)).toBeNull()
+  });
 
-        // After deletion of 10 (node with two children), the tree should look like:
-        //        12
-        //       /  \
-        //      5    15
-        //     / \     \
-        //    3   8     18
-
-        expect(bst.traverseInorder()).toEqual([3, 5, 8, 12, 15, 18]);
-    });
-
-    it('should find maximum and minimum values', () => {
-        const bst = new BinaryTree<number>();
-
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
-
-        expect(bst.getMax()).toBe(18);
-        expect(bst.getMin()).toBe(3);
-    });
-
-    it('should check if the tree is empty', () => {
-        const emptyBst = new BinaryTree<number>();
-        const nonEmptyBst = new BinaryTree<number>();
-        nonEmptyBst.insert(10);
-
-        expect(emptyBst.isEmpty()).toBe(true);
-        expect(nonEmptyBst.isEmpty()).toBe(false);
-    });
-
-    it('should traverse the tree in inorder', () => {
-        const bst = new BinaryTree<number>();
-
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
-
-        // The inorder traversal should return [3, 5, 8, 10, 12, 15, 18]
-        expect(bst.traverseInorder()).toEqual([3, 5, 8, 10, 12, 15, 18]);
-    });
-
-    it('should traverse the tree in preorder', () => {
-        const bst = new BinaryTree<number>();
-
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
-
-        // The preorder traversal should return [10, 5, 3, 8, 15, 12, 18]
-        expect(bst.traversePreorder()).toEqual([10, 5, 3, 8, 15, 12, 18]);
-    });
-
-    it('should traverse the tree in postorder', () => {
-        const bst = new BinaryTree<number>();
-
-        bst.insert(10);
-        bst.insert(5);
-        bst.insert(15);
-        bst.insert(3);
-        bst.insert(8);
-        bst.insert(12);
-        bst.insert(18);
-
-        // The postorder traversal should return [3, 8, 5, 12, 18, 15, 10]
-        expect(bst.traversePostorder()).toEqual([3, 8, 5, 12, 18, 15, 10]);
-    });
 });

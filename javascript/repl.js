@@ -1,16 +1,17 @@
-// [ ] - Continue
 const bst = new BinarySearchTree()
 
 // insert
-bst.insert(15, 'A')
-bst.insert(6, 'Y')
-bst.insert(18, 'Q')
-bst.insert(17, 'W')
-bst.insert(20, 'E')
+bst.insert(10, 'A');
+bst.insert(5, 'B');
+bst.insert(15, 'C');
+bst.insert(3, 'D');
+bst.insert(8, 'E');
+bst.insert(12, 'F');
+bst.insert(18, 'G');
+
+// delete
+bst.delete(5);
 
 // walk
-console.log(bst.walk())
+console.log(bst.walk());
 
-console.log(bst.getSuccessor(13))
-console.log(bst.getSuccessor(17))
-console.log(bst.getSuccessor(20))

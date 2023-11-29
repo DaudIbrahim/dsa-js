@@ -90,4 +90,122 @@ describe('Binary Search Tree', () => {
     expect(bst.getSuccessor(20)).toBeNull()
   });
 
+  it('should delete a leaf node', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
+
+    // After insertion, the tree looks like:
+    //        10
+    //       /  \
+    //      5    15
+    //     / \  /  \
+    //    3  8 12  18
+
+    bst.delete(3);
+
+    // After deletion of node with key 3, the tree should look like:
+    //        10
+    //       /  \
+    //      5    15
+    //       \  /  \
+    //        8 12  18
+
+    expect(bst.walk()).toEqual([5, 8, 10, 12, 15, 18]);
+  });
+
+  it('should delete a node with one left child', () => {
+    bst.insert(10, 'A');
+    bst.insert(15, 'C');
+    bst.insert(5, 'B');
+    bst.insert(1, 'B');
+
+    bst.delete(5);
+
+    expect(bst.walk()).toEqual([1, 10, 15]);
+  });
+
+  it('should delete a node with one right child', () => {
+    bst.insert(10, 'A');
+    bst.insert(15, 'C');
+    bst.insert(5, 'B');
+    bst.insert(7, 'B');
+
+    bst.delete(5);
+
+    expect(bst.walk()).toEqual([7, 10, 15]);
+  });
+
+  it('should delete a node with two children', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
+
+    bst.delete(5);
+
+    // After deletion of node with key 15, the tree should look like:
+    //        10
+    //       /  \
+    //      5    18
+    //     / \   /
+    //    3  8  12
+
+    expect(bst.walk()).toEqual([3, 8, 10, 12, 15, 18]);
+  });
+
+  it('should delete the root node', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+    bst.insert(3, 'D');
+    bst.insert(8, 'E');
+    bst.insert(12, 'F');
+    bst.insert(18, 'G');
+
+    bst.delete(10);
+
+    // After deletion of the root node with key 10, the tree should look like:
+    //        12
+    //       /  \
+    //      5    15
+    //     /    /  \
+    //    3    8   18
+
+    expect(bst.walk()).toEqual([3, 5, 8, 12, 15, 18]);
+  });
+
+  it('should handle deletion of a non-existent key', () => {
+    bst.insert(10, 'A');
+    bst.insert(5, 'B');
+    bst.insert(15, 'C');
+
+    bst.delete(7); // 7 does not exist in the tree
+
+    // The tree should remain unchanged:
+    //        10
+    //       /  \
+    //      5    15
+
+    expect(bst.walk()).toEqual([5, 10, 15]);
+  });
+
+  it('should delete the only node in the tree', () => {
+    bst.insert(10, 'A');
+
+    bst.delete(10);
+
+    // After deletion of the only node with key 10, the tree should be empty.
+
+    expect(bst.isEmpty()).toBe(true);
+    expect(bst.walk()).toEqual([]);
+  });
+
 });

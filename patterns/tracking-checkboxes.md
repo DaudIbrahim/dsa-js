@@ -11,11 +11,11 @@ It is helpful to have all the progress and code in one place. Some prefer this p
 Tracking checkboxes can be used by forking this repository and marking an X inside the appropriate brackets. Here is an example:
 
 - [ ] Unsolved
-- [X] Solved
+- [x] Solved
 
 ## Two Pointers
 
-- [X] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+- [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 - [ ] [Sum of Three Values](https://leetcode.com/problems/3sum-closest/)
 

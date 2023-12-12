@@ -4,21 +4,21 @@
 
 - Arrays
 
-  - Linear Search ✔
+  - Linear Search
 
-  - Binary Search ✔
+  - Binary Search
 
   - Two Crystal Balls
 
 - Lists
 
-  - Singly ✔
+  - Singly
 
-  - Doubly ✔
+  - Doubly
 
-  - Queue ✔
+  - Queue
 
-  - Stack ✔
+  - Stack
 
   - ArrayList
 
